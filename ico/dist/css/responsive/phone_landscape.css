@@ -1,0 +1,74 @@
+dt {
+  display: inline;
+  font-weight: 300;
+}
+dd {
+  display: inline;
+  float: right;
+}
+.progressbar li .title {
+  padding: 0 10px 0 0;
+  height: 50px;
+  text-align: center;
+}
+.progressbar li p {
+  padding: 0 10px 0 0;
+  text-align: center;
+}
+
+
+.user-settings .personel-infomation {
+  margin: 20px 0px;
+}
+
+.coin-list .frame {
+  height: 100px;
+}
+.coin-list .coin-title {
+  text-align: center;
+}
+.coin-list p {
+  text-align: center;
+}
+.coin-list small {
+  margin-left: 38%;
+}
+.coin-list .cash {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 30px;
+}
+.coin-list .area {
+  display: block;
+  text-align: center;
+  height: auto;
+}
+
+.coin-list .area .btn-invest-now {
+  margin: 25px 0;
+}
+.coin-list .area img {
+  padding-left: 0;
+}
+
+
+ul.tree {
+  padding-top: 100px;
+  padding-left: 0;
+}
+
+
+
+ul.tree li > ul {
+  top: -235px;
+  left: 115%;
+}
+
+ul.tree li ul li:before {
+  width: 25px;
+  left: -25px;
+}
+
+ul.tree ul li:after {
+  left: -25px;
+}

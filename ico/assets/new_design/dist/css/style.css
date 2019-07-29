@@ -1,0 +1,30 @@
+body {
+    background: rgba(0, 0, 0, 0) url("/ico/assets/images/bg.jpg") no-repeat scroll 0 0 / cover ;
+    color: #fff;
+    height: 100vh;
+    padding-top: 50px;
+}
+.footer {
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.main-maintain {
+    margin: 2.5% auto;
+    max-width: 580px;
+    width: 100%;
+}
+.main-maintain h1 {
+    font-weight: bold;
+}
+.main-maintain p {
+	font-size: 17px;
+}
+.main-maintain > img {
+    box-shadow: 0 0 69px #90effb;
+    display: block;
+    margin: 30px auto;
+    padding: 20px;
+    width: 160px;
+}

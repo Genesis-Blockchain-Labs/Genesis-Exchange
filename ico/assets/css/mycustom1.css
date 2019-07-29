@@ -1,0 +1,186 @@
+
+body {background: #272C33;}
+.proof_tbl{width:50%;height:auto;align:center;}
+table, tr, td { border: 1px solid black; font-size: 17px;text-align: left;}
+.header-right {float: right;padding-right: 0;width: auto;}
+.proof {font-family: open sans condensed;margin: 110px 0 0;}
+.main-top-margin { margin-top: 0;}
+.proof.registration-page > p {font-size: 20px;margin: 0 auto;max-width: 845px;text-align: center;}
+.proof.registration-page .btn.btn-primary.btn-block {font-family: 'Roboto Mono', monospace;display: inline-block;position: relative;background: none;border: none; cursor: pointer;font-weight: 300 !important; background:#000;border-radius: 50px;color: #fff;font-size: 16px;font-weight: 300;margin: 2px 0 10px;padding: 0px 15px;width: 100%;height: 50px;-webkit-transition: background-color .5s ease-in-out;-moz-transition: background-color .5s ease-in-out; -o-transition: background-color .5s ease-in-out;transition: background-color .5s ease-in-out; }
+.proof.registration-page .btn.btn-primary.btn-block:hover { background:#1c1c1c;  }
+.registration-page .login-register-link {font-family: 'Roboto Mono', monospace;color: #fff;font-weight: 100;float: left;font-size: 14px;margin-top: 15px;text-align: center;width: 100%;}
+.registration-page .form-horizontal .control-label {font-family: 'Roboto Mono', monospace;color: #fff; font-weight: 100 !important;font-size: 14px;font-weight: normal;text-align: left;}
+*[role="form"] {border-radius: 4px;margin: 35px auto;max-width: 560px;padding: 23px;}
+*[role="form"] h2 { font-family: 'Roboto Mono', monospace;font-size: 32px;line-height: 32px;color: rgba(255, 255, 255, 0.8);font-weight: 100;text-align: center;margin: 0px 0px 10px;}
+.registration-page input {font-size: 16px;font-family: 'Roboto Mono', monospace;font-weight: 300;width: 100%;height: 50px;border-radius: 50px;border: none;margin: 0 0 10px;background-color: rgba(255,255,255,0.2); padding: 10px 25px;color: #fff; -moz-box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.3);-webkit-box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.3);box-shadow: 0px 0px 22px 1px rgba(0,0,0,0.3)}
+a.support-link.submit {float: left;text-align: center;width: 100%;margin: 0 0 28px;}
+#email {float: right;}
+#password, #cpassword {float: right;}
+#firstName{background: rgba(0, 0, 0, 0) url("../img/name-icon.png") no-repeat scroll 96% center; float: right;}
+.proof {margin: 30px auto;max-width: 556px;}
+.validate_error {float: left;font-size: 17px;}
+input#reference_code {background: rgba(255,255,255,0.2);}
+.error-vlidation p { color: red;font-size: 15px;font-family: monospace;}
+.col-xs-9.meg-div {color: #d7d7d7;font-size: 18px;}
+
+
+.log_in .main-top-margin{background-color:transparent;float:left;margin-top:85px;width:100%;}
+.log_in .inner-main-top{float:left;width:100%;}
+.log_in #inputEmail{float:right;width:80%;}
+.log_in #inputPassword{float:right;width:80%;}
+.log_in .card label span{color:#000;display:block;float:left;font-weight:normal;margin-top:11px;width:90px;}
+.log_in .card label{float:left;font-size:18px;width:100%;}
+.log_in .forgot-reg-link{float:right;margin:10px 0 0;text-align:center;width:80%;}
+.log_in .forgot-reg-link p a{color:#00b437;}
+.log_in .forgot-reg-link > p{font-family:'Roboto Mono', monospace;font-size:16px;line-height:18px;color:rgba(255, 255, 255, 0.8);font-weight:100;text-align:center;margin:6px 0px 10px;}
+.log_in .forgot-reg-link{margin:10px 0 0;text-align:center;width:100%;}
+.log_in .card-container.card{padding:25px;}
+.log_in .btn{font-weight:700;height:36px;-moz-user-select:none;-webkit-user-select:none;user-select:none;cursor:default;}
+/** Card component **/.proof .card h1{font-family:'Roboto Mono', monospace;font-size:25px;line-height:27px;color:rgba(255, 255, 255,0.80);font-weight:300;text-align:center;margin:0px 0px;}
+.log_in .card{background-color:transparent;padding:20px 25px 30px;margin:0 auto 25px;border-radius:4px;float:left;box-shadow:none;}
+.log_in .profile-img-card{width:96px;height:96px;margin:0 auto 10px;display:block;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.log_in .m-l-heading{text-align:center;}
+.log_in a.support-link.submit{margin:12px 0 15px;float:left;text-align:center;width:100%;}
+/** Form styles**/ .profile-name-card{font-size:16px;font-weight:bold;margin:0;min-height:1em;text-align:left;}
+.log_in .reauth-email{display:block;color:#404040;line-height:2;margin-bottom:10px;font-size:14px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.log_in .form-signin #inputEmail, .form-signin #inputPassword{direction:ltr;font-size:16px;font-family:'Roboto Mono', monospace;font-weight:300;width:100%;height:50px;border-radius:50px;border:none;margin:0 0 10px;background-color:rgba(255,255,255,0.2);padding:10px 25px;color:#fff;-moz-box-shadow:0px 0px 22px 1px rgba(0, 0, 0, 0.3);-webkit-box-shadow:0px 0px 22px 1px rgba(0, 0, 0, 0.3);box-shadow:0px 0px 22px 1px rgba(0, 0, 0, 0.3);}
+.log_in .form-signin input[type=email],.form-signin input[type=password],.form-signin input[type=text],.form-signin button{width:100%;display:block;margin-bottom:10px;z-index:1;position:relative;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.log_in .form-signin .form-control:focus{border-color:rgb(104, 145, 162);outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);}
+.log_in .btn.btn-signin{font-family:'Roboto Mono', monospace;display:inline-block;position:relative;background:none;border:none;cursor:pointer;font-weight:300 !important;background:#000;border-radius:50px;color:#fff;font-size:16px;font-weight:300;margin:2px 0 10px;padding:0px 15px;width:100%;height:50px;-webkit-transition:background-color .5s ease-in-out;-moz-transition:background-color .5s ease-in-out;-o-transition:background-color .5s ease-in-out;transition:background-color .5s ease-in-out;}
+.log_in .btn.btn-signin:hover,.btn.btn-signin:active,.btn.btn-signin:focus{background:#1c1c1c;}
+.log_in .forgot-password{color:rgb(104, 145, 162);}
+.log_in .forgot-password:hover,.forgot-password:active,.forgot-password:focus{color:rgb(12, 97, 33);}
+.log_in .login-content{position:relative;z-index:9;}
+.log_in .team-content-wrapper{overflow:hidden}
+.log_in label.validation-eror {margin-left: 10px;font-family: monospace; margin-top: 2px;color: red;}
+.main-top-margin.log_in { margin-top: 100px;}
+
+
+
+.set_p .proof {margin: 50px auto 0;width: 600px ;}
+.proof-cotnetn {position: relative;z-index: 9;}
+.set_p .registration-page .login-register-link {color: #000;float: left;font-size: 18px;margin-top: 15px;text-align: center;width: 100%;}
+.set_p .registration-page .form-horizontal .control-label {color: #fff;font-size: 18px;font-weight: normal; text-align: left;}
+.set_p *[role="form"] h2 {color: rgb(48, 186, 58);font-size: 30px;font-weight: bold;letter-spacing: 2px;margin-bottom: 20px;text-align: left;}
+.set_p .registration-page input {direction: ltr;font-size: 16px;font-family: 'Roboto Mono', monospace;font-weight: 300;width: 100%;height: 50px;border-radius: 50px;border: none;margin: 0 0 14px;background-color: rgba(255,255,255,0.2);padding: 10px 25px;color: #fff;-moz-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3);-webkit-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3);box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3)}
+.set_p #email { direction: ltr;font-size: 16px;font-family: 'Roboto Mono', monospace;font-weight: 300;width: 100%;height: 50px;border-radius: 50px;border: none;margin: 0 0 14px;background-color: rgba(255,255,255,0.2);padding: 10px 25px;color: #fff;-moz-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3);-webkit-box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3);box-shadow: 0px 0px 22px 1px rgba(0, 0, 0, 0.3);}
+.set_p #password,
+.set_p #cpassword {background: rgba(0, 0, 0, 0) url("../img/lock-icon.png") no-repeat scroll 96% center;float: right;}
+.main-reg-para {margin-top: 150px;}
+.reg-para p {max-width: 800px;text-align: center;margin: 0 auto;overflow: hidden;font-family: 'Roboto Mono', monospace;font-size: 16px;line-height: 30px;color:#ffffff;font-weight: 100;}
+.team-content-wrapper {margin: 0 0 30xp !important;}
+.set_p .header-right {width: 100%;}
+	
+	
+	
+.forg .inner-main-top{float:left;margin-top:30px;width:100%;}
+.forg #inputEmail{float:right;padding:6px 46px 6px 10px;width:80%;font-weight:normal;font-family:open sans condensed;}
+.forg #inputPassword{background:rgba(0, 0, 0, 0) url("../img/lock-icon.png") no-repeat scroll 96% center;float:right;width:80%;}
+.forg .card label span{color:#000;display:block;float:left;font-weight:normal;margin-top:11px;width:90px;}
+.forg .card label{float:left;font-size:18px;width:100%;}
+.forg .forgot-reg-link{float:left;width:100%;text-align:center;}
+.forg .forgot-reg-link p a{text-decoration:underline;}
+.forg .forgot-reg-link > p{font-size:16px;}
+.forg .forgot-reg-link{float:right;margin:30px 0 0;text-align:center;width:100%;}
+.forg .proof .card h1{font-family:'Roboto Mono', monospace;font-size:32px;line-height:48px;color:rgba(255, 255, 255, 0.8);font-weight:100;text-align:center;margin:0px 0px 0px;}
+.forg .m-l-heading{text-align:center;}
+.forg .m-l-heading strong{font-family:'Roboto Mono', monospace;font-size:18px;color:rgba(255, 255, 255, 0.8);line-height:26px;margin-top:15px;font-weight:100;text-align:center;}
+.forg .m-l-heading strong a.support-link.submit{color:rgba(255, 255, 255, 0.8);}
+.forg .proof_tbl{width:50%;height:auto;align:center;}
+.forg table,tr,td{border:1px solid black;font-size:17px;text-align:left;}
+.forg .header-right{float:right;padding-right:0;width:auto;}
+.forg .proof{margin:0 auto;max-width:650px;}
+.forg .footer-warp a.banner-btn{margin:auto;position:relative;}
+.forg .card-container.card{padding:25px;position:relative;z-index:9;}
+.forg .btn{font-weight:700;height:36px;-moz-user-select:none;-webkit-user-select:none;user-select:none;cursor:default;}
+/** Card component*/.card{background-color:transparent;padding:20px 25px 30px;margin:0 auto 25px;border-radius:4px;float:left;min-height:unset;box-shadow:none;}
+.forg .profile-img-card{width:96px;height:96px;margin:0 auto 10px;display:block;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.forg .team-content-wrapper{overflow:hidden}
+/** Form styles*/.profile-name-card{font-size:16px;font-weight:bold;margin:0;min-height:1em;text-align:center;}
+.forg .reauth-email{display:block;color:#404040;line-height:2;margin-bottom:10px;font-size:14px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.forg .form-signin #inputEmail,.form-signin #inputPassword{direction:ltr;font-size:16px;font-family:'Roboto Mono', monospace;width:100%;height:50px;border-radius:50px;border:none;margin:20px 0 0;background-color:rgba(255,255,255,0.2);padding:10px 25px;color:#fff;-moz-box-shadow:0px 0px 22px 1px rgba(0,0,0,0.3);-webkit-box-shadow:0px 0px 22px 1px rgba(0,0,0,0.3);box-shadow:0px 0px 22px 1px rgba(0,0,0,0.3);}
+.forg .form-signin input[type=email],.form-signin input[type=password],.form-signin input[type=text],.form-signin button{width:100%;display:block;margin-bottom:10px;z-index:1;position:relative;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.forg .form-signin .form-control:focus{border-color:rgb(104, 145, 162);outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);}
+.forg .btn.btn-signin{font-family:'Roboto Mono', monospace;display:inline-block;position:relative;background:none;border:none;cursor:pointer;background:#000;border-radius:50px;color:#fff;font-size:16px;font-weight:300;margin:20px 0 0;padding:0px 15px;width:100%;height:50px;-webkit-transition:background-color .5s ease-in-out;-moz-transition:background-color .5s ease-in-out;-o-transition:background-color .5s ease-in-out;transition:background-color .5s ease-in-out;}
+.forg .btn.btn-signin:hover,.btn.btn-signin:active,.btn.btn-signin:focus{background:#1c1c1c;}
+.forg .forgot-password{color:rgb(104, 145, 162);}
+.forg .forgot-password:hover,.forgot-password:active,.forgot-password:focus{color:rgb(12, 97, 33);}
+.forg .forgot-reg-link .login-link{float:left;}
+.forg .forgot-reg-link .forgot-link{float:right;}
+.forg .forgot-reg-link p span a{font-family:'Roboto Mono', monospace;font-size:18px;color:rgba(255, 255, 255, 0.8);line-height:26px;margin-top:15px;font-weight:100;text-align:center;text-decoration:none;}
+.forg .forgot-reg-link p span a{color:rgba(255, 255, 255, 1);}
+.forg .bd_vont .proof .forgot-bottom-text{position:relative;z-index:9;line-height:26px;margin-bottom:26px;text-align:center;width:100%;overflow:hidden;font-family:'Roboto Mono', monospace;font-size:14px;line-height:25px;color:rgba(255, 255, 255, 0.8);font-weight:100;text-align:center;margin:0px 0px 0px;}
+.forg .forgot-bottom-text > img{display:inline;}
+.forg [role="form"] { border-radius: 0px; margin: 0 auto; max-width: 595px; padding: 0;}
+.forg button#close_forgot {margin-right: 10px;}
+.main-top-margin.forg {margin-top: 100px;}	
+	
+	
+	
+
+.thank .proof{margin:140px 0 0!important;max-width: 1600px;}   
+.thank .bck{float:right;}
+.thank .proof h1{float:left;margin:0;color:#fff;}
+.thank .main-top-margin{margin-top:0;}
+.thank .thanks-section{float:left;width:100%;}
+.thank .proof hr{float:left;width:100%;}
+.thank .bck > a{background:#000 none repeat scroll 0 0;border-radius:2px;color:#fff;height:44px;padding:8px 40px;}
+.thank .bck > a:hover{background:#1c1c1c;}
+.thank .thanks-section > p{color:#fff;font-size:21px;text-align:center;}
+.thank .bd_vont .proof > p {font-family: 'Source Sans Pro', sans-serif;}
+.thank h1 {font-family: 'Source Sans Pro', sans-serif;}	
+	
+	
+	
+	
+.auth .alert.alert-danger.boon-alert-danger {font-size: 18px;}	
+	
+@media (max-width: 991px) {
+.set_p .bd_vont .proof { margin: 20px auto 160px !important; max-width: 556px; }
+.top-menu a { padding: 2px 11px;}	
+.header-top-right .social-icons a { margin-right: 9px;}
+.bd_vont .proof { margin: 130px auto 0 !important ;max-width: 556px;}
+
+		
+		
+    }
+
+@media (max-width: 767px) {
+.set_p .bd_vont .proof {margin: 40px auto 0 5%; !important; max-width: 90%;}
+.bd_vont .proof {margin: 160px auto 0 !important ;max-width: 556px;}
+.proof { margin: 40px 0 0!important;}
+.proof_tbl {height: auto;width: 100%;}
+.footer-top .col-sm-4 {margin-bottom: 40px;}
+.reg-para p {padding: 0 25px;}
+*[role="form"] {padding: 0px;}
+.header-right { width: 100%;}
+.sett .col-xs-9 {width: 100%;}
+.col-xs-9.meg-div.tt {text-align: center;}
+.sett .col-xs-3 {width: 100%;}
+.log_in .proof {margin: 40px auto 160px !important;}
+.log_in .proof_tbl {height: auto;width: 100%;}
+.log_in .team-content-wrapper {padding: 0px;}
+.log_in .header-right {width: 100% !important;}
+.forg .card-container.card {padding: 0px;}
+
+
+
+
+}
+
+	
+
+
+
+
+@media (max-width: 580px) {
+.proof.registration-page .btn.btn-primary.btn-block {font-size: 12px;}
+.btn.btn-primary.btn-block {font-size: 12px;}
+		
+}
+
+
+
+
+
+

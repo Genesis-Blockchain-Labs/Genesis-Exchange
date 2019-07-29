@@ -1,0 +1,270 @@
+body {
+    background: #333 none repeat scroll 0 0;
+}
+.all-form .alert {
+    background: #00a705 none repeat scroll 0 0;
+    border-color: #006f03;
+    color: #ffffff;
+    font-size: 16px !important;
+}
+.proof_tbl{width:50%;height:auto;align:center;}
+table, tr, td { border: 1px solid black; font-size: 17px;text-align: left;}
+.header-right {float: right;padding-right: 0;width: auto;}
+.proof {font-family: open sans condensed;margin: 110px 0 0;}
+.main-top-margin { margin-top: 0;}
+.proof.registration-page > p {font-size: 20px;margin: 0 auto;max-width: 845px;text-align: center;}
+.all-form .btn.btn-primary.btn-block {
+    background: indianred none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    height: 50px;
+    margin: 2px 0 10px;
+    padding: 0 15px;
+    position: relative;
+    transition: background-color 0.5s ease-in-out 0s;
+    width: 100%;
+}
+input[type=number] {
+   -moz-appearance: textfield;
+}
+/* Re-applies the controls on :hover and :focus */
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: textfield;
+}
+/* Remove controls from Safari and Chrome */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+  margin: 0; /* Removes leftover margin */
+}
+.proof.registration-page .btn.btn-primary.btn-block:hover { background:#1c1c1c;  }
+.registration-page .login-register-link {font-family: 'Roboto Mono', monospace;color: #fff;font-weight: 100;float: left;font-size: 14px;margin-top: 15px;text-align: center;width: 100%;}
+.registration-page .form-horizontal .control-label {font-family: 'Roboto Mono', monospace;color: #fff; font-weight: 100 !important;font-size: 14px;font-weight: normal;text-align: left;}
+*[role="form"] h2 { font-family: 'Roboto Mono', monospace;font-size: 32px;line-height: 32px;color: rgba(255, 255, 255, 0.8);font-weight: 100;text-align: center;margin: 0px 0px 10px;}
+a.support-link.submit {float: left;text-align: center;width: 100%;margin: 0 0 28px;}
+
+#password, #cpassword {float: right;}
+#firstName{background: rgba(0, 0, 0, 0) url("../img/name-icon.png") no-repeat scroll 96% center; float: right;}
+.proof {margin: 30px auto;max-width: 556px;}
+.validate_error {float: left;font-size: 17px;}
+input#reference_code {background: rgba(255,255,255,0.2);}
+.error-vlidation p { color: red;font-size: 15px;font-family: monospace;}
+.col-xs-9.meg-div {color: #d7d7d7;font-size: 18px;}
+
+
+.log_in .main-top-margin{background-color:transparent;float:left;margin-top:85px;width:100%;}
+.log_in .inner-main-top{float:left;width:100%;}
+.log_in .card label span{color:#000;display:block;float:left;font-weight:normal;margin-top:11px;width:90px;}
+.log_in .card label {
+    color: #666;
+    float: left;
+    font-family: open sans;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+}
+.all-form .m-l-head h2 {
+    color: #666;
+    font-family: open sans;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 0 15px;
+    text-align: left;
+}
+.all-form .forgot-reg-link{float:right;margin:10px 0 0;text-align:center;width:100%;}
+.all-form .forgot-reg-link p a {
+    color: #4d4d4d;
+    text-decoration: underline;
+}
+.all-form .forgot-reg-link > p {
+    color: #333;
+    font-family: open sans;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 18px;
+    margin: 6px 0 10px;
+    text-align: center;
+}
+
+.all-form .card {
+    background-color: transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    float: left;
+    padding: 20px 25px 30px;
+    width: 100%;
+}
+
+.log_in .profile-img-card{width:96px;height:96px;margin:0 auto 10px;display:block;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+.log_in .m-l-heading{text-align:center;}
+.log_in a.support-link.submit{margin:12px 0 15px;float:left;text-align:center;width:100%;}
+/** Form styles**/ .profile-name-card{font-size:16px;font-weight:bold;margin:0;min-height:1em;text-align:left;}
+.log_in .reauth-email{display:block;color:#404040;line-height:2;margin-bottom:10px;font-size:14px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+.log_in .form-signin .form-control:focus{border-color:rgb(104, 145, 162);outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);}
+
+.log_in .btn.btn-signin:hover,.btn.btn-signin:active,.btn.btn-signin:focus{background:#1c1c1c;}
+.log_in .forgot-password{color:rgb(104, 145, 162);}
+.log_in .forgot-password:hover,.forgot-password:active,.forgot-password:focus{color:rgb(12, 97, 33);}
+.log_in .team-content-wrapper{overflow:hidden}
+.log_in label.validation-eror {margin-left: 10px;font-family: monospace; margin-top: 2px;color: red;}
+.main-top-margin.log_in { margin-top: 100px;}
+.set_p .registration-page .login-register-link {color: #000;float: left;font-size: 18px;margin-top: 15px;text-align: center;width: 100%;}
+.all-form form input {
+    background-color: transparent;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px !important;
+    color: #333;
+    direction: ltr;
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    margin: 0 0 14px;
+    padding: 10px 25px;
+    width: 100%;
+}
+.all-form .forgot-reg-link p span {
+    color: #333;
+    font-weight: normal;
+}
+.all-form .main-top-margin {
+    margin-top: 45px;
+}
+.set_p #password,
+.set_p #cpassword {background: rgba(0, 0, 0, 0) url("../img/lock-icon.png") no-repeat scroll 96% center;float: right;}
+
+.reg-para p {max-width: 800px;text-align: center;margin: 0 auto;overflow: hidden;font-family: 'Roboto Mono', monospace;font-size: 16px;line-height: 30px;color:#ffffff;font-weight: 100;}
+.all-form .team-content-wrapper {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 10px 0 30px;
+    overflow: hidden;
+    padding: 5px;
+    position: relative;
+}
+.set_p .header-right {width: 100%;}
+	
+	
+	
+.all-form .inner-main-top{float:left;margin-top:30px;width:100%;}
+.forg #inputPassword{background:rgba(0, 0, 0, 0) url("../img/lock-icon.png") no-repeat scroll 96% center;float:right;width:80%;}
+.all-form .card label span{color:#000;display:block;float:left;font-weight:normal;margin-top:11px;width:90px;}
+.forg .card label{float:left;font-size:18px;width:100%;}
+
+
+.all-form .proof .card h1 {
+    color: #4d4d4d;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 48px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.forg .m-l-heading strong{font-family:'Roboto Mono', monospace;font-size:18px;color:rgba(255, 255, 255, 0.8);line-height:26px;margin-top:15px;font-weight:100;text-align:center;}
+.forg .m-l-heading strong a.support-link.submit{color:rgba(255, 255, 255, 0.8);}
+.forg .proof_tbl{width:50%;height:auto;align:center;}
+.forg table,tr,td{border:1px solid black;font-size:17px;text-align:left;}
+.forg .header-right{float:right;padding-right:0;width:auto;}
+.forg .footer-warp a.banner-btn{margin:auto;position:relative;}
+
+
+.forg .profile-img-card{width:96px;height:96px;margin:0 auto 10px;display:block;-moz-border-radius:50%;-webkit-border-radius:50%;border-radius:50%;}
+/** Form styles*/.profile-name-card{font-size:16px;font-weight:bold;margin:0;min-height:1em;text-align:center;}
+.forg .reauth-email{display:block;color:#404040;line-height:2;margin-bottom:10px;font-size:14px;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+
+
+.all-form .form-signin .form-control:focus{border-color:rgb(104, 145, 162);outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgb(104, 145, 162);}
+
+.all-form .btn.btn-signin:hover, .all-form .btn.btn-signin:active, .all-form .btn.btn-signin:focus {
+    background: #b44343 none repeat scroll 0 0;
+}
+.forg .forgot-password{color:rgb(104, 145, 162);}
+.forg .forgot-password:hover,.forgot-password:active,.forgot-password:focus{color:rgb(12, 97, 33);}
+
+.forg .bd_vont .proof .forgot-bottom-text{position:relative;z-index:9;line-height:26px;margin-bottom:26px;text-align:center;width:100%;overflow:hidden;font-family:'Roboto Mono', monospace;font-size:14px;line-height:25px;color:rgba(255, 255, 255, 0.8);font-weight:100;text-align:center;margin:0px 0px 0px;}
+.forg .forgot-bottom-text > img{display:inline;}
+.forg button#close_forgot {margin-right: 10px;}
+
+	
+	
+	
+
+.thank .proof{margin:140px 0 0!important;max-width: 1600px;}   
+.thank .bck{float:right;}
+.thank .proof h1{float:left;margin:0;color:#fff;}
+.thank .main-top-margin{margin-top:0;}
+.thank .thanks-section{float:left;width:100%;}
+.thank .proof hr{float:left;width:100%;}
+.thank .bck > a{background:#000 none repeat scroll 0 0;border-radius:2px;color:#fff;height:44px;padding:8px 40px;}
+.thank .bck > a:hover{background:#1c1c1c;}
+.thank .thanks-section > p{color:#fff;font-size:21px;text-align:center;}
+.thank .bd_vont .proof > p {font-family: 'Source Sans Pro', sans-serif;}
+.thank h1 {font-family: 'Source Sans Pro', sans-serif;}	
+	
+	
+	
+	
+.auth .alert.alert-danger.boon-alert-danger {font-size: 18px;}	
+.col-xs-9.meg-div {font-size: 19px!important; width: 100%!important;color: green!important; font-family:"Montserrat",sans-serif!important;}
+.m-l-head.gr h2 {font-size: 19px!important;color: green!important; font-family:"Montserrat",sans-serif!important;}
+.header .main-logo {height: 51px;width: auto!important;}
+/***=============  Responsive ==================*****/
+	
+@media (max-width: 991px) {
+.set_p .bd_vont .proof { margin: 20px auto 160px !important; max-width: 556px; }
+.top-menu a { padding: 2px 11px;}	
+.header-top-right .social-icons a { margin-right: 9px;}
+.bd_vont .proof { margin: 130px auto 0 !important ;max-width: 556px;}
+
+		
+		
+    }
+
+@media (max-width: 767px) {
+.set_p .bd_vont .proof {margin: 40px auto 0 5%; !important; max-width: 90%;}
+.bd_vont .proof {margin: 160px auto 0 !important ;max-width: 556px;}
+.proof { margin: 40px 0 0!important;}
+.proof_tbl {height: auto;width: 100%;}
+.footer-top .col-sm-4 {margin-bottom: 40px;}
+.reg-para p {padding: 0 25px;}
+*[role="form"] {padding: 0px;}
+.header-right { width: 100%;}
+.sett .col-xs-9 {width: 100%;}
+.col-xs-9.meg-div.tt {text-align: center;}
+.sett .col-xs-3 {width: 100%;}
+.log_in .proof {margin: 40px auto 160px !important;}
+.log_in .proof_tbl {height: auto;width: 100%;}
+.log_in .team-content-wrapper {padding: 0px;}
+.log_in .header-right {width: 100% !important;}
+.forg .card-container.card {padding: 0px;}
+
+
+
+
+}
+
+	
+
+
+
+
+@media (max-width: 580px) {
+.proof.registration-page .btn.btn-primary.btn-block {font-size: 12px;}
+.btn.btn-primary.btn-block {font-size: 12px;}
+		
+}
+
+
+
+
+
+

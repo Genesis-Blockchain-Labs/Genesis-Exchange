@@ -1,0 +1,41 @@
+Changes in following files:-
+######################################
+For Admin
+
+/asdfgh/application/config
+1.config.php
+
+1.base_url
+2.admin_email
+3.cookie_domain
+4.site_base_url
+
+2.Database.php
+1.hostname
+2.username
+3.password
+4.database
+#######################################
+For Site
+
+/ico/application/config
+1.config.php
+
+1.base_url
+2.home_url
+3.ADMIN_EMAIL
+4.cookie_domain
+
+
+2.Database.php
+1.hostname
+2.username
+3.password
+4.database
+
+########################################
+On root 
+ index.php Need to change all base urls
+
+
+

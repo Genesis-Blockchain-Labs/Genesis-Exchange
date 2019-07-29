@@ -1,0 +1,18 @@
+/* Phone */
+
+@import url("responsive/phone_portrait.css") only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait); /* Dik */
+@import url("responsive/phone_landscape.css") only screen and (min-device-width: 568px) and (max-device-width: 736px) and (orientation: landscape); /* Yan */
+
+/* Tablet */
+@import url("responsive/tablet_portrait.css") only screen and (min-width:481px) and (max-width:768px)  and (orientation: portrait); /* Dik */
+@import url("responsive/tablet_landscape.css") only screen and (min-width:481px) and (max-width:768px) and (orientation: landscape); /* Yan */
+@import url("responsive/tablet_portrait_ap.css") only screen and (min-width:768px) and (max-width:1024px)  and (orientation: portrait); /* Dik */
+@import url("responsive/tablet_landscape_ap.css") only screen and (min-width:1024px) and (max-width:768px) and (orientation: landscape); /* Yan */
+
+/* Desktop */
+@import url("responsive/desktop.css") only screen and (min-width:1200px) and (max-width:1920px);
+
+/*
+    Example
+    https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/

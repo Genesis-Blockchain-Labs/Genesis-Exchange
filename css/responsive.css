@@ -1,0 +1,372 @@
+@media (max-width: 767px) {
+	#mainNav {
+			background:#252525;
+	}
+
+	header.masthead {
+			padding-top:0;
+	}
+
+	body,html{
+		overflow-x: hidden;
+	}
+
+	/* .phoneMobil{
+		background: black!important;
+	}
+	#header .eprprogres{
+		background: black!important;
+	} */
+
+	#company .tabbable-line .tabHeader li a{
+		padding: 5px!important;
+		font-size: 10px!important;
+		font-weight: 400!important;
+	}
+	#header .main-video video{
+		height: 250%!important;
+		display: none!important;
+	}
+	#header .main-video{
+		overflow: auto!important;
+		height: 250%!important;
+		background:url(../../img/aas.html)!important;
+		width: 100%!important;
+	}
+	#roadmap{
+		padding: 30px 0!important;
+	}
+
+	#roadmap p{
+		padding: 0!important;
+	}
+
+	#roadmap .progressbar li{
+		width: 100%!important;
+		padding: 30px 0 0 0!important;
+		border-bottom: 1px solid #767676;
+	}
+	#roadmap .progressbar li:before{
+		margin-top: 15px!important;
+	}
+	#events ul.ref{
+		display: flex!important;
+		flex-wrap: wrap;
+	}
+	#events ul.ref li{
+		padding: 0 10px!important;
+		margin: 25px 0!important;
+		width: 50%!important;
+		float: none!important;
+	}
+
+	#referral-program .box-ref{
+		padding: 0!important;
+	}
+	#roadmap .progressbar li .top{
+		top: -10px!important;
+		margin-bottom: 50px!important;
+		margin-top:15px!important;
+	}
+	#roadmap .progressbar li.stp:after,#roadmap .progressbar li.active + li:after{
+		display: none!important;
+	}
+
+	.cards .tabbable-line .tab-content .tab-pane.active .leftcard{
+		position: relative!important;
+	}
+	.styleDay {
+		width: 25%!important;
+	}
+	#staticImg{
+		display: none!important;
+	}
+
+	#mainNav .navbar-nav>li.nav-item>a.nav-link{
+		color: #fff!important;
+	}
+	.banner-card {
+			margin-top: -130px;
+	}
+
+	#digital .digitaltop {
+			margin-top: 0;
+	}
+	#digital .digitaltop .pt-5{
+			padding-top: 0 !important;
+	}
+	#digital .digitaltitle {
+			padding-top: 50px;
+	}
+
+	#ico .bordered {
+			width: 100%;
+	}
+
+	.progressbar {
+			padding: 0;
+			flex-wrap: wrap!important;
+	}
+
+	#cards .enporcard {
+			height: 250px;
+	}
+
+	#cards .enporcard .c1,
+	#cards .enporcard .c2,
+	#cards .enporcard .c3,
+	#cards .enporcard .c4 {
+			left: 0px !important;
+	}
+
+	.selector {
+			width: 100px;
+			height: 100px;
+			margin-top: -50px;
+			margin-left: -50px;
+	}
+	.selector img {
+			height: 150px !important;
+	}
+
+	.table td, .table th {
+			font-size: 13px;
+			padding: 10px 2px;
+			vertical-align: middle;
+	}
+
+	#team ul.ref li {
+			width: 100%;
+			padding: 0 30px 10px 30px;
+			text-align: center;
+	}
+
+	#team h2 {
+			margin-top: 20px;
+	}
+
+	#team .team-main {
+			position: relative;
+	}
+
+	.feature-area .text-right,
+	.feature-area .media-body {
+			text-align: center !important;
+	}
+
+	.home-mobile {
+			position: relative; margin-top: 10px;
+	}
+	#referral-program .img-fluid{
+		width: 100%!important;
+	}
+
+	.subscribe .text-left{
+
+		text-align:center!important;
+		font-size: 12px!important;
+	}
+	.subscribe .text-right{
+
+		text-align:center!important;
+		font-size: 12px!important;
+	}
+	.box .box-main{
+		margin-top: 35px!important;
+	}
+
+	#roadmap .progressbar li:after{
+		display: none!important;
+	}
+
+	.user-dashboard{
+		height: auto!important;
+		padding-top: 20px!important;
+
+	}
+	.user-dashboard .leftInner{
+		width: 100%!important;
+	}
+
+	#viewer,.padded{
+		left: 0!important;
+		top: 0!important;
+		opacity: .4!important;
+	}
+	.section .info{
+		z-index: 99!important;
+		position: relative!important;
+	}
+	.iphone img{
+		left: 0!important;
+		top: -10%!important;
+	}
+
+	.tabHeaderTwo-tabs {
+		border-bottom: none;
+	}
+
+	.tabHeaderTwo-tabs li a{
+		font-weight: 300!important;
+	}
+
+	#company .tabbable-panel{
+		padding: 0!important;
+	}
+
+	.section.full-height{
+		height: auto!important;
+	}
+	.package{
+		display: none!important;
+	}
+	.iphone.padded{
+		margin-left: 0!important;
+	}
+
+	.tabContent .tabItem .img-desktop {
+		display: none!important;
+	}
+	.settingBack{
+		height: auto!important;
+		min-height:!important;
+	}
+	#section-2{
+		background: #020202!important;
+	}
+	#section-1 .branding{
+		z-index: 999999!important;
+		background: #252525;
+	}
+
+	.rowFlex {
+		justify-content: center;
+	}
+
+	.rowFlex .sr-contact{
+		width: 50% !important;
+		padding: 0 5px;
+		margin-bottom: 15px;
+	}
+
+	.flexRow li, .teamContent .sr-contact{
+		width: 50%!important;
+	}
+	#company{
+		overflow: auto!important;
+	}
+	
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+	.rowFlex .sr-contact{
+		width: 32%!important;
+		padding: 0 5px;
+	}
+
+	.flexRow li, .teamContent .sr-contact{
+		width: 32%!important;
+	}
+	#roadmap .progressbar li p{
+		width: auto!important;
+	}
+	/* #section-1 .nav .nav-item .nav-link{
+		padding: .5em!important;
+		font-size: 12px!important;
+	} */
+
+
+}
+
+@media (max-width: 1199px) {
+	.menu{
+		position: relative;
+		z-index: 999999!important;
+		display:flex;
+		width: 100%;
+		justify-content:flex-end;
+		height: auto;
+	}
+	.navBar{
+		cursor: pointer;
+		width:36px;
+		height: 100%;
+		display: table;
+		margin-top: -35px;
+	}
+	.navMobil{
+		position: absolute!important;
+		z-index:999999!important;
+		width: 100%;
+		flex-direction: column;
+		height: auto;background:rgba(0,0,0,.9);
+		padding: 15px 10px;
+		text-align: center;
+	}
+	.noNe{
+		display: none!important;
+	}
+	.mobilNone{
+		display: none!important;
+	}
+	.mobilLi{
+		display: block!important;
+	}
+}
+
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+
+	/* #section-1 .nav .nav-item .nav-link{
+		padding: .5em .7em!important;
+	} */
+	.rowFlex .sr-contact{
+		width: 24%!important;
+		padding: 0 5px;
+	}
+
+	.flexRow li, .teamContent .sr-contact{
+		width: 24%!important;
+	}
+	#roadmap .progressbar li p{
+		width: 190px!important;
+	}
+
+}
+
+@media (min-width: 1359px) {
+
+	#company .tabbable-line .contentInner .comContent p{
+		width: 70%;
+	}
+
+}
+
+@media (min-width: 1900px){
+	#company .box-main, #events .box-main{
+		width:1820px!important;
+	}
+	.user-dashboard .right-img{
+		width: 70%;
+	}
+	#products .container-fluid{
+		width: 1820px!important;
+		display: table;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 767px) {
+	.flexRow li, .teamContent .sr-contact {
+		width: 100%!important;
+		text-align: center;
+	}
+	#team .team-main .content, #products .bankTitle {
+		width: 100%;
+	}
+	#team .team-main hr, #team .team-big-main hr {
+		margin: 0 auto;
+	}
+}
