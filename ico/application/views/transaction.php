@@ -16,7 +16,7 @@ $user_data = $this->session->userdata('user_data');
                                             <th class="text-center">Transaction ID</th>
                                             <th>Amount</th>
                                             <th>Currency</th>
-                                            <th>Enpor Tokens</th>
+                                            <th>SafeCardano Tokens</th>
                                             <th>Date</th>
                                             <th class="text-center">Status</th>
                                         </tr>
@@ -33,7 +33,7 @@ $user_data = $this->session->userdata('user_data');
 													
 													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['currency']; ?></td>
 													
-													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['token']; ?>  EPR</td>
+													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['token']; ?>  BDLR</td>
 													
 													<td><?php echo $transaction['date']; ?></td>
 													<td><span class="<?php if($transaction['status']==-1) {

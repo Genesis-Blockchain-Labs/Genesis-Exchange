@@ -5,7 +5,7 @@
             <h3 class="panel-title">Forgot Password</h3>
 			<h4 id="sucess" class="all-success-alert"></h4>
         </div>
-        <div class="panel-body user-settings">
+        <div class="panel-body user-settings full-width">
            <?php $attributes = array('class' => 'form-signin', 'id' => 'submit','role'=>"form", 'method'=>'post','name'=>"forgot", 'autocomplete'=>'off');
 							echo form_open(' ', $attributes);
 																

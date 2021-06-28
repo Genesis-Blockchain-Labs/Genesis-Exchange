@@ -21,8 +21,6 @@ $ci = &get_instance();
 		<link rel="icon" type="image/png" href="<?php echo base_url()?>assets/img/favicon2.png"/>  
 
 
-    <title>ENPOR</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url()?>assets/new_design/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -56,11 +54,15 @@ $ci = &get_instance();
 			?>
          
           
-          <a href="<?php echo ($actual_link==home_url)? '#home':home_url;?>"><img src="<?php echo base_url()?>assets/new_design/dist/img/logo.png"></a>
+        <a href="<?php echo ($actual_link==home_url)? '#home':home_url;?>">
+			<img src="<?php echo base_url()?>assets/new_design/dist/img/logo.png">
+			<!--<span class="text-white">The SafeCardano</span>-->
+		</a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-center">
             <li><a href="<?php echo base_url()?>">Home</a></li>
+			<!--
             <li><a href="<?php echo base_url()?>#prod">Products</a></li>
             <li><a href="<?php echo base_url()?>#comp">Company</a></li>
             <li><a href="<?php echo base_url()?>#ico-roadmap">RoadMap & ICO</a></li>
@@ -68,6 +70,7 @@ $ci = &get_instance();
             <li><a href="<?php echo base_url()?>#ref-prog">Referral Program</a></li>
             <li><a href="<?php echo base_url()?>#event">Events & Partners</a></li>
             <li><a href="<?php echo base_url()?>#faq1">FAQ</a></li>
+			-->
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

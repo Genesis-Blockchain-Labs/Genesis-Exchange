@@ -89,4 +89,9 @@ class Invest_model extends CI_Model{
 		return $result;
 	
 	}
+	public function ico_setup_data($type){
+		$select=$this->db->query("SELECT * FROM `ico_setup` WHERE ico_type='$type'");
+		$result = $select->row_array();
+		return $result;
+	}
 }

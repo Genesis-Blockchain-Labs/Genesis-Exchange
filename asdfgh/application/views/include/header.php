@@ -35,8 +35,8 @@
 </head>
 <style>
 img.logo_ing {
-    width: 50% !important;
-    margin-left: 37px;
+    width: 70% !important;
+    margin-left: 20px;
 }
 </style>
 <body class="nav-md">

@@ -192,7 +192,7 @@
                     Already have an account? <a href="<?php echo base_url()?>login">Login</a><br>
                     <!--Forgot password? <a href="<?php //echo base_url()?>forgot">Recover</a-->
                 </div>
-				<div class="g-recaptcha" data-sitekey="6LcnG0gUAAAAAEK-jOUxqmXaAyVbE7YvzoPZDSHG" data-theme="dark"></div>
+				<div class="g-recaptcha" data-sitekey="6LdFHZkaAAAAANKYSE9AKsY_GoDNHXM2zRDSFebl" data-theme="dark"></div>
 					<div class="g-captcha-error error-vlidation"><?php echo form_error('g-recaptcha-response'); ?></div>	
             <?php echo form_close(); ?>
         </div>

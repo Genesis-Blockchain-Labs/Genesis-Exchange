@@ -31,7 +31,7 @@ class Paypal extends CI_Controller
         
         $this->paypal_lib->paypal_auto_form();
     }
-	 function success(){
+	function success(){
         //get the transaction data
        $paypalInfo    = $this->input->post();
 		$data['user_id'] = $paypalInfo['custom'];
@@ -53,17 +53,17 @@ class Paypal extends CI_Controller
         
         //pass the transaction data to view
         $this->load->view('success');
-     }
+    }
      
-     function cancel(){
+    function cancel(){
         $this->load->view('cancel');
-     }
+    }
      
-     function ipn(){
+    function ipn(){
 		// die('here rukja');
         //paypal return transaction details array
-      /*   $paypalInfo    = $this->input->post();
-		mail("vijay.immanentsolutions@gmail.com","My subject","$paypalInfo");
+        $paypalInfo = $this->input->post();
+		mail("mukesh.immanent@gmail.com","My subject","$paypalInfo");
 		$data['user_id'] = $paypalInfo['custom'];
         $data['txn_id']    = $paypalInfo["txn_id"];
         $data['amount'] = $paypalInfo["mc_gross"];
@@ -80,6 +80,6 @@ class Paypal extends CI_Controller
         if(preg_match("/VERIFIED/i",$result)){
             //insert the transaction data into the database
             $this->user_model->insertTransaction($data);
-        }  */
+        }
     }
 }

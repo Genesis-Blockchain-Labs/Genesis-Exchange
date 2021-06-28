@@ -24,14 +24,15 @@ class Invest extends CI_Controller{
 			$data['active_class'] = 'invest';
 			$current_date = date('Y-m-d');
 			$data['price_bonus'] = $this->invest_model->get_price_bonus($current_date);
+			$data['ico_setup'] = $this->invest_model->ico_setup_data('pre_ico');
 			$data['account_btc'] = $this->invest_model->get_account($this->security->xss_clean($user_id),1);
 			$data['account_eth'] = $this->invest_model->get_account($this->security->xss_clean($user_id),2);
 			$data['account_ltc'] = $this->invest_model->get_account($this->security->xss_clean($user_id),4);
 			$data['account_dash'] = $this->invest_model->get_account($this->security->xss_clean($user_id),3);
 			$data['btc_address'] = $this->GetDepositAddress('BTC');
 			$data['eth_address'] = $this->GetDepositAddress('ETH');
-			$data['ltc_address'] = $this->GetDepositAddress('LTC');
-			$data['dash_address'] = $this->GetDepositAddress('DASH');
+			$data['doge_address'] = $this->GetDepositAddress('DOGE');
+			$data['bnb_address'] = $this->GetDepositAddress('BNB');
 			$this->load->view('invest',$data);
 		}else{
 			redirect('login');

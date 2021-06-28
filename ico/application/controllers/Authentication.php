@@ -178,7 +178,7 @@ class Authentication extends CI_Controller {
 												}
 												else
 												{
-													$data['error_msg'] = 'Enpor login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
+													$data['error_msg'] = 'SafeCardano login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
 													$this->load->view("includes/header",$data);
 													$this->load->view('login',$data);
 												}
@@ -231,7 +231,7 @@ class Authentication extends CI_Controller {
 												}
 												else
 												{
-													$data['error_msg'] = 'Enpor login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
+													$data['error_msg'] = 'SafeCardano login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
 													$this->load->view("includes/header",$data);
 													$this->load->view('login',$data);
 												}
@@ -296,7 +296,7 @@ class Authentication extends CI_Controller {
 												}
 												else
 												{
-													$data['error_msg'] = 'Enpor login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
+													$data['error_msg'] = 'SafeCardano login has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
 													$this->load->view("includes/header",$data);
 													$this->load->view('login',$data);
 												}
@@ -472,7 +472,7 @@ class Authentication extends CI_Controller {
 		foreach ($people as $number => $name)
 	   		{
 		        $sms = $client->account->messages->sendMessage(
-			"+442891042496",$number,"Your Enpor authentication code is: ".$message);
+			"+442891042496",$number,"Your SafeCardano authentication code is: ".$message);
 
 		}
 		

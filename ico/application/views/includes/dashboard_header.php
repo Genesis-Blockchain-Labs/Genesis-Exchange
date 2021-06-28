@@ -70,7 +70,7 @@ $ci = &get_instance();
 
 							<?php if(total_coins!=""){ ?>
 							<li class="per-info">
-							<a href="javascript:void(0);">Account Balance:  <?php echo $total_coins; ?> EPR</a>
+							<a href="javascript:void(0);">Account Balance:  <?php echo $total_coins; ?> SafeAda</a>
 							</li>
 							<?php } ?>
 							<!--li class="per-info">
@@ -145,7 +145,7 @@ $ci = &get_instance();
                                     <li>
                                         <a href="<?php echo base_url('message/'.$broadcasts->id); ?>">
                                             <div>
-                                                <strong>Enpor</strong>
+                                                <strong>SafeCardano</strong>
 												<span class="pull-right text-muted">
 													<em><?php 
 													$brodate = explode(' ',$broadcasts->date);

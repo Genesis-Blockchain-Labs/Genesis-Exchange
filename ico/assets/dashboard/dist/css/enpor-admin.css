@@ -1250,6 +1250,7 @@ ul.desc3 > li > ul > li:last-child:after {
 }
 .coin-list .frame img {
   vertical-align: middle;
+  border-radius: 100%;
 }
 
 .coin-list .coin-title {
@@ -1548,6 +1549,7 @@ ul.desc3 > li > ul > li:last-child:after {
 }
 .user-dashboard .top-list .box .child .dl-horizontal img {
   padding-right: 5px;
+  border-radius: 20px;
 }
 @media (min-width: 768px) {
   .user-dashboard .top-list .box .child .dl-horizontal dt {

@@ -33,12 +33,12 @@ $user_data = $this->session->userdata('user_data');
                                                 <dd><span id="current_eth"></span> <?php echo SHORT_DOMAIN_NAME; ?></dd>
                                             </div>
                                             <div class="dl-horizontal">
-                                                <dt><img src="<?php echo base_url(); ?>assets/dashboard/dist/img/coin-ltc.png"> 1 LTC</dt>
-                                                <dd><span id="current_ltc"></span> <?php echo SHORT_DOMAIN_NAME; ?></dd>
+                                                <dt><img src="<?php echo base_url(); ?>assets/dashboard/dist/img/coin-doge.png"> 1 DOGECOIN</dt>
+                                                <dd><span id="current_doge"></span> <?php echo SHORT_DOMAIN_NAME; ?></dd>
                                             </div>
                                             <div class="dl-horizontal">
-                                                <dt><img src="<?php echo base_url(); ?>assets/dashboard/dist/img/coin-dash.png"> 1 DASH</dt>
-                                                <dd><span id="current_dash"></span> <?php echo SHORT_DOMAIN_NAME; ?></dd>
+                                                <dt><img src="<?php echo base_url(); ?>assets/dashboard/dist/img/coin-bnb.png"> 1 BNB</dt>
+                                                <dd><span id="current_bnb"></span> <?php echo SHORT_DOMAIN_NAME; ?></dd>
                                             </div>
                                         </div>
                                     </dl>
@@ -229,9 +229,10 @@ $(function(){
 			var btc = data.USD;
 			var domain = '<?php echo DOMAIN_NAME ?>';
 			//var btc = (btc*2);
-			var btc = btc * <?php echo $tokenrate; ?>;
-			 var neltcs = btc * <?php echo $percentage['extra_bonus']/100; ?>;
-            var subtc = neltcs + btc;
+			//var btc = btc * <?php echo $tokenrate; ?>;
+			//var neltcs = btc * <?php echo $percentage['extra_bonus']/100; ?>;
+            //var subtc = neltcs + btc;
+			var subtc = btc*<?php echo $ico_setup['dollar_to_safeada']; ?>;
 			$('#current_btc').html(subtc.toFixed(2));
 		}
 	});
@@ -245,40 +246,43 @@ $(function(){
 			var eth = data.USD;
 			var domain = '<?php echo DOMAIN_NAME ?>';
 			//var eth = (eth*2);
-			 var eth = eth * <?php echo $tokenrate; ?>;
-             var neltcseth = eth * <?php echo $percentage['extra_bonus']/100; ?>;
-            var subtceth = neltcseth + eth;
+			//var eth = eth * <?php echo $tokenrate; ?>;
+            //var neltcseth = eth * <?php echo $percentage['extra_bonus']/100; ?>;
+            //var subtceth = neltcseth + eth;
+			var subtceth = eth*<?php echo $ico_setup['dollar_to_safeada']; ?>;
 			$('#current_eth').html(subtceth.toFixed(2));
 		}
 	});
 	
 	$.ajax({
 		type: "POST",
-		url: "https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=BTC,USD,EUR",
+		url: "https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=BTC,USD,EUR",
 		data: {},
 		dataType:'json',
 		success:function(data){
-			var ltc = data.USD;
-			//var ltc = (ltc*2);
-			var ltc = ltc * <?php echo $tokenrate; ?>;
-            var neltc = ltc * <?php echo $percentage['extra_bonus']/100; ?>;
-            var sultc = neltc + ltc;
-			$('#current_ltc').html(sultc.toFixed(2));
+			var doge = data.USD;
+			//var doge = (doge*2);
+			//var doge = doge * <?php echo $tokenrate; ?>;
+            //var neltc = doge * <?php echo $percentage['extra_bonus']/100; ?>;
+            //var sultc = neltc + doge;
+			var sultc = doge*<?php echo $ico_setup['dollar_to_safeada']; ?>;
+			$('#current_doge').html(sultc.toFixed(2));
 		}
 	});	
 	
 	$.ajax({
 		type: "POST",
-		url: "https://min-api.cryptocompare.com/data/price?fsym=DASH&tsyms=BTC,USD,EUR",
+		url: "https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=BTC,USD,EUR",
 		data: {},
 		dataType:'json',
 		success:function(data){
-			var dash = data.USD;
-			//var dash = (dash*2);
-			var dash = dash * <?php echo $tokenrate; ?>;
-               var nedash = dash * <?php echo $percentage['extra_bonus']/100; ?>;
-            var subdash = nedash + dash;
-			$('#current_dash').html(subdash.toFixed(2)); 
+			var bnb = data.USD;
+			//var bnb = (bnb*2);
+			//var bnb = bnb * <?php echo $tokenrate; ?>;
+            //var nedash = bnb * <?php echo $percentage['extra_bonus']/100; ?>;
+            //var subdash = nedash + bnb;
+			var subdash = bnb*<?php echo $ico_setup['dollar_to_safeada']; ?>;
+			$('#current_bnb').html(subdash.toFixed(2)); 
 		}
 	});	
 });

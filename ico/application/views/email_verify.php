@@ -12,7 +12,7 @@ $user_data = $this->session->userdata('user_data');
 					else{
 					?>
             <h2>You're nearly there !</h2>
-            <p>We just need to verify your email address to complete your Enpor Account</p>
+            <p>We just need to verify your email address to complete your SafeCardano Account</p>
 			<?php 
 				$action_url = base_url().'verifyaccount';				
 				$attributes = array('class' => 'form-acive-acc', 'id' => 'submit', 'role'=>'form');
@@ -34,7 +34,7 @@ $user_data = $this->session->userdata('user_data');
             <a href="javascript:void(0)"> <button type="submit" id="submits">Verify Email Address</button></a>
             <p class="note">
                 Please note that link expire 5 days<br>
-                If you have not signed up to Enpor please Ignore this small. Thanks
+                If you have not signed up to SafeCardano please Ignore this small. Thanks
             </p>
 		<?php 	echo form_close();    ?>
 		<?php	}	?>

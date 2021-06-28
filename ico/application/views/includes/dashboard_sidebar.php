@@ -16,6 +16,7 @@ $ci = &get_instance();
      <nav id="sidebar" class="">
             <div class="sidebar-header">
                 <img src="<?php echo base_url(); ?>assets/dashboard/dist/img/logo.png">
+				<!--<span class="text-white">The SafeCardano</span>-->
             </div>
             <div class="user-profile">
 			<?php if(!empty($user_data['profile_pic'])) {  ?>

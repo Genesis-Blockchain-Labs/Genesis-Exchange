@@ -1,13 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 define('DB_PREFIX', 'ico_');
-define('DOMAIN_NAME', 'Enpor');
-define('SHORT_DOMAIN_NAME', 'Enpor');
-define('DOMAIN_EMAIL', 'info@enpor.com');
+define('DOMAIN_NAME', 'SafeCardano');
+define('SHORT_DOMAIN_NAME', 'SafeAda');
+define('DOMAIN_EMAIL', 'info@safecardano.com');
 
-define('DOMAIN_NAME_ADMIN', 'Enpor');
-define('SHORT_DOMAIN_NAME_ADMIN', 'Enpor');
-define('DOMAIN_EMAIL_ADMIN', 'info@enpor.com');
+define('DOMAIN_NAME_ADMIN', 'SafeCardano');
+define('SHORT_DOMAIN_NAME_ADMIN', 'SafeAda');
+define('DOMAIN_EMAIL_ADMIN', 'info@safecardano.com');
 
 
 

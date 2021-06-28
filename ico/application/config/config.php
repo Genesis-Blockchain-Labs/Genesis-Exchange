@@ -23,8 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://enpor.demodemodemo.ga/ico/';
-define("home_url", "http://enpor.demodemodemo.ga/ico/");
+$config['base_url'] = 'http://demodemodemo.info/safecardano/ico/';
+define("home_url", "http://demodemodemo.info/safecardano/ico/");
 
 /*
 |--------------------------------------------------------------------------
@@ -406,7 +406,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= 'enpor.demodemodemo.ga';
+$config['cookie_domain']	= 'demodemodemo.info';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;

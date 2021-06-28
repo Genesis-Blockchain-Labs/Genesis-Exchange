@@ -16,7 +16,7 @@ class Transaction extends CI_Controller {
 	***********************************************************/
 	public function transaction_detail(){
 		$data['user_detail'] = $this->transaction_model->get_users();
-		$this->load->template('transaction_detail', $this->security->xss_clean($data));
+		$this->load->template('transaction_detail', $data);
 	}
 	
 	/***********************************************************

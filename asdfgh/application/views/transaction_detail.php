@@ -50,6 +50,7 @@
         </div>
     </div>
   </div>
+</div>  
 <script type="text/javascript">
 function confirmDeletion(id){
 	var result = confirm("Are you sure you want to Permanently Delete this transaction?");

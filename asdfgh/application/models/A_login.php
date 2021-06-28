@@ -6,7 +6,6 @@ class A_login extends CI_Model{
    ****************************************************/
    public function login($data)
    {
-		$this->load->library('encrypt');
         $query = $this->db->get_where('login', array('username'=> $data['username']));
 		return ($query->num_rows()>0 ) ? $query->row() : false;
     }

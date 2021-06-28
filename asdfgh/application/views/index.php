@@ -74,16 +74,16 @@ $nonkyc = 100 - $kyc;
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="enpor_cora">
 							<div class="in_enpor_cora">
-								<p class="stac-ico"><img src="<?php echo base_url();?>assest/images/stack-icon.png" alt="stack" /><span> TOTAL EPR COINS</span> </p>
+								<p class="stac-ico"><img src="<?php echo base_url();?>assest/images/stack-icon.png" alt="stack" /><span> TOTAL MYL COINS</span> </p>
 								<div class="enpor-q-coins">
-									<img src="<?php echo base_url();?>assest/images/enpor-q-icon.png" alt="enpor" /><span class="green_font">1,000,000,000</span>
+									<img src="<?php echo base_url();?>assest/images/logo.png" alt="SafeCardano" /><span class="green_font">1,000,000,000</span>
 								</div>
 							</div>
 							
 							<div class="in_enpor_cora">
-								<p class="stac-ico"><img src="<?php echo base_url();?>assest/images/stack-icon2.png" alt="stack2" /><span> TOTAL SOLD EPR COINS</span> </p>
+								<p class="stac-ico"><img src="<?php echo base_url();?>assest/images/stack-icon2.png" alt="stack2" /><span> TOTAL SOLD MYL COINS</span> </p>
 								<div class="enpor-q-coins">
-									<img src="<?php echo base_url();?>assest/images/enpor-q-icon.png" alt="enpor" /><span class="green_font"><?php echo round($sold_coin['total_coins'],2); ?></span>
+									<img src="<?php echo base_url();?>assest/images/logo.png" alt="SafeCardano" /><span class="green_font"><?php echo round($sold_coin['total_coins'],2); ?></span>
 								</div>
 							</div>
 							

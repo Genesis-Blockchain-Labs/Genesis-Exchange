@@ -6,9 +6,16 @@ $user_data = $this->session->userdata('user_data');
                 <div class="col-lg-12">
 				<?php if(!empty($price_bonus['token_price'])){ ?>
 					<input type="hidden" name="token_price" id="token_price"  value="<?php echo $price_bonus['token_price']; ?>" />
-				<?php } 
-				if(!empty($price_bonus['extra_bonus'])){ ?>
+				<?php } else { ?>
+					<input type="hidden" name="token_price" id="token_price"  value="0" />
+				<?php } if(!empty($price_bonus['extra_bonus'])){ ?>
 					<input type="hidden" name="extra_bonus" id="extra_bonus"  value="<?php echo $price_bonus['extra_bonus']; ?>" />
+				<?php } else { ?>
+					<input type="hidden" name="extra_bonus" id="extra_bonus"  value="0" />
+				<?php } if(!empty($ico_setup['dollar_to_safeada'])){ ?>
+					<input type="hidden" name="dollar_to_safeada" id="dollar_to_safeada"  value="<?php echo $ico_setup['dollar_to_safeada']; ?>" />
+				<?php } else { ?>
+					<input type="hidden" name="dollar_to_safeada" id="dollar_to_safeada"  value="1" />
 				<?php } ?>
                     <div class="panel panel-default coin-list">
                         <div class="panel-body">
@@ -144,11 +151,11 @@ $user_data = $this->session->userdata('user_data');
 							<div class="crsc-dashboard-m1-info transac_eth"></div>
                         </div>
                     </div>
-                    <div class="panel panel-default coin-list">
+					<div class="panel panel-default coin-list">
                         <div class="panel-body">
-						<?php							
-								$attributes = array('role'=>"form", 'id' => 'ltc_form', 'method'=>'post', 'autocomplete'=>'off');
-								$url = base_url().'litecoin';
+							<?php							
+								$attributes = array('role'=>"form", 'id' => 'doge_form', 'method'=>'post', 'autocomplete'=>'off');
+								$url = base_url().'doge';
 								echo form_open_multipart($url, $attributes);
 							
 								$data = array(
@@ -156,130 +163,126 @@ $user_data = $this->session->userdata('user_data');
 									'type'         => 'hidden',
 									'value'         => $this->security->get_csrf_hash()
 								);
-
 								echo form_input($data);
-														$data = array(
+													$data = array(
+														'name'          => 'coin_type',
+														'type'         => 'hidden',
+														'value'         => 3
+													);
+
+								echo form_input($data);	
+							?> 					
+					<input type="hidden" id="doge_token" value="" name="epr_token"/>
+					<input type="hidden" id="doge_dollar" value="" name="dollar_amount"/>
+					<input type="hidden" name="address" value="<?php echo $doge_address; ?>">
+					<input type="hidden" name="currency" value="DOGE">
+                            <div class="row doge_div">
+                                <div class="col-lg-2">
+                                    <div class="frame">
+                                        <span class="helper"></span>
+                                        <img src="<?php echo base_url();?>assets/new_design/dist/img/coinx-doge.png">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="coin-title">Continue with Dogecoin</div>
+                                    <p>Enter the amount in dogecoin</p>
+                                    <?php
+								$data = array(
+									'name'          => 'amount',
+									'id'            => 'doge_amount',
+									'placeholder'   => 'DOGE Amount',
+									'type'         => 'number',
+									'value'         => set_value('doge_amount'),
+									'class'         => 'form-control',
+									'step'			=> '0.01',
+									'min'			=>'0.01',
+								);
+								
+								echo form_input($data);		
+						?>
+						<div class="error-vlidation doge_error"></div>
+										
+                                    <small>Min payment 0.01 DOGE</small>		
+                                </div>
+                                <div class="col-lg-2" id="doge_epr">	
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="area">
+									<input type="button" class="btn btn-invest-now" id="doge_but" value="Invest Now" onclick="save_doge();">
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">   
+                                </div>
+                            </div>
+							<?php echo form_close(); ?>
+							<div class="crsc-dashboard-m1-info transac_doge"></div>
+                        </div>
+                    </div>
+					<div class="panel panel-default coin-list">
+                        <div class="panel-body">
+							<?php							
+								$attributes = array('role'=>"form", 'id' => 'bnb_form', 'method'=>'post', 'autocomplete'=>'off');
+								$url = base_url().'bnb';
+								echo form_open_multipart($url, $attributes);
+							
+								$data = array(
+									'name'          => $this->security->get_csrf_token_name(),
+									'type'         => 'hidden',
+									'value'         => $this->security->get_csrf_hash()
+								);
+								echo form_input($data);
+													$data = array(
 														'name'          => 'coin_type',
 														'type'         => 'hidden',
 														'value'         => 4
 													);
 
-								echo form_input($data);
-								
-					?> 						
-					<input type="hidden" id="ltc_token" value="" name="epr_token" />
-					<input type="hidden" id="ltc_dollar" value="" name="dollar_amount"/>
-					<input type="hidden" name="address" value="<?php echo $ltc_address; ?>">
-										<input type="hidden" name="currency" value="LTC">
-                            <div class="row ltc_div">
-                                <div class="col-lg-2">
-                                    <div class="frame">
-                                        <span class="helper"></span>
-                                        <img src="<?php echo base_url();?>assets/new_design/dist/img/coinx-ltc.png">
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="coin-title">Continue with Litecoin</div>
-                                    <p>Enter the amount in litecoin</p>
-                                    <?php
-									$data = array(
-										'name'          => 'amount',
-										'id'            => 'litecoin_amount',
-										'placeholder'   => 'Litecoin Amount',
-										'type'         => 'number',
-										'value'         => set_value('litecoin_amount'),
-										'class'         => 'form-control',
-										'step'			=> '0.01',
-										'min'			=>'0.01',
-									);
-								
-								echo form_input($data);
-						?>
-						<div class="error-vlidation ltc_error"></div>
-                                    <small>Min payment 0.01 LTC</small>				
-                                </div>
-                                <div class="col-lg-2" id="ltc_epr">
-                                </div>
-                                <div class="col-lg-2">
-                                    <div class="area">		
-								<p><input type="button" type="submit" class="btn btn-invest-now" value="Invest Now" id="ltc_but" onclick="save_ltc();"></p>
-                                    </div>
-                                </div>
-                                <div class="col-lg-2">  
-                                </div>
-                            </div>
-							<?php      echo form_close();   ?>
-							<div class="crsc-dashboard-m1-info transac_ltc"></div>
-                        </div>
-						
-                    </div>
-                    <div class="panel panel-default coin-list">
-                        <div class="panel-body">
-							<?php							
-								$attributes = array('role'=>"form", 'id' => 'dash_form', 'method'=>'post', 'autocomplete'=>'off');
-								$url = base_url().'dash';
-								echo form_open_multipart($url, $attributes);
-							
-								$data = array(
-									'name'          => $this->security->get_csrf_token_name(),
-									'type'         => 'hidden',
-									'value'         => $this->security->get_csrf_hash()
-								);
-
-								echo form_input($data);
-													
-								$data = array(
-									'name'          => 'coin_type',
-									'type'         => 'hidden',
-									'value'         => 3
-								);
-
 								echo form_input($data);	
-				    
-							?> 	
-						<input type="hidden" id="dash_token" value="" name="epr_token"/>
-						<input type="hidden" id="dash_dollar" value="" name="dollar_amount"/>
-						<input type="hidden" name="address" value="<?php echo $dash_address; ?>">
-										<input type="hidden" name="currency" value="DASH">
-                            <div class="row dash_div">
+							?> 					
+					<input type="hidden" id="bnb_token" value="" name="epr_token"/>
+					<input type="hidden" id="bnb_dollar" value="" name="dollar_amount"/>
+					<input type="hidden" name="address" value="<?php echo $bnb_address; ?>">
+					<input type="hidden" name="currency" value="BNB">
+                            <div class="row bnb_div">
                                 <div class="col-lg-2">
                                     <div class="frame">
                                         <span class="helper"></span>
-                                        <img src="<?php echo base_url();?>assets/new_design/dist/img/coinx-dash.png">
+                                        <img src="<?php echo base_url();?>assets/new_design/dist/img/coinx-bnb.png">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
-                                    <div class="coin-title">Continue with Dash</div>		
-                                    <p>Enter the amount in dash</p>
+                                    <div class="coin-title">Continue with Bnb</div>
+                                    <p>Enter the amount in bnb</p>
                                     <?php
-									$data = array(
-										'name'          => 'amount',
-										'id'            => 'dash_amount',
-										'placeholder'   => 'DASH Amount',
-										'type'         => 'number',
-										'value'         => set_value('dash_amount'),
-										'class'         => 'form-control',
-										'step'			=> '0.01',
-										'min'			=>'0.01',
-									);
-								  
-									echo form_input($data);
-									?>
-							<div class="error-vlidation dash_error"></div>
-                                    <small>Min payment 0.01 DASH</small>	
+								$data = array(
+									'name'          => 'amount',
+									'id'            => 'bnb_amount',
+									'placeholder'   => 'BNB Amount',
+									'type'         => 'number',
+									'value'         => set_value('bnb_amount'),
+									'class'         => 'form-control',
+									'step'			=> '0.01',
+									'min'			=>'0.01',
+								);
+								
+								echo form_input($data);		
+						?>
+						<div class="error-vlidation bnb_error"></div>
+										
+                                    <small>Min payment 0.01 BNB</small>		
                                 </div>
-                                <div class="col-lg-2" id="dash_epr">
-                                </div>    
+                                <div class="col-lg-2" id="bnb_epr">	
+                                </div>
                                 <div class="col-lg-2">
-                                    <div class="area">	
-											<input type="button" class="btn btn-invest-now" id="dash_but" value="Invest Now" onclick="save_dash();">
+                                    <div class="area">
+									<input type="button" class="btn btn-invest-now" id="bnb_but" value="Invest Now" onclick="save_bnb();">
                                     </div>
                                 </div>
-                                <div class="col-lg-2">  
+                                <div class="col-lg-2">   
                                 </div>
                             </div>
-								<?php      echo form_close();   ?>
-								<div class="crsc-dashboard-m1-info transac_dash"></div>
+							<?php echo form_close(); ?>
+							<div class="crsc-dashboard-m1-info transac_bnb"></div>
                         </div>
                     </div>
                 </div>
@@ -455,8 +458,9 @@ function outFunc111() {
 	/**************get btc live rate************/
 	$('#btc_amount').keyup(function(){
 		var btc = $('#btc_amount').val();
-		var token_price = $('#token_price').val();
-		var extra_bonus = $('#extra_bonus').val();
+		//var token_price = $('#token_price').val();
+		//var extra_bonus = $('#extra_bonus').val();
+		var dollar_to_safeada = $('#dollar_to_safeada').val();
 		if(token_price == 0){
 			token_price = 1;
 		}
@@ -470,13 +474,14 @@ function outFunc111() {
 			 success: function(result){
 				var usd = parseFloat(result.USD);
 				var btc_dollar = parseFloat(btc)*usd;
-				var amount_epr = btc_dollar/parseFloat(token_price);
-				var bonus_epr = (amount_epr*extra_bonus)/100;
-				var amount = amount_epr+bonus_epr;
+				//var amount_epr = btc_dollar/parseFloat(token_price);
+				//var bonus_epr = (amount_epr*extra_bonus)/100;
+				//var amount = amount_epr+bonus_epr;
+				var amount = btc_dollar*dollar_to_safeada;
 				amount = amount.toFixed(2);
 				$('#btc_dollar').val(btc_dollar);
 				$('#btc_token').val(amount);
-				$('#btc_epr').html('<div class="cash" >'+amount+' EPR</div><small>You will receive</small>');
+				$('#btc_epr').html('<div class="cash" >'+amount+' SafeAda</div><small>You will receive</small>');
 			}
 		});
 	}
@@ -487,8 +492,9 @@ function outFunc111() {
 	/******************get eth live arte*******************/
 	$('#eth_amount').keyup(function(){
 		var eth = $('#eth_amount').val();
-		var token_price = $('#token_price').val();
-		var extra_bonus = $('#extra_bonus').val();
+		//var token_price = $('#token_price').val();
+		//var extra_bonus = $('#extra_bonus').val();
+		var dollar_to_safeada = $('#dollar_to_safeada').val();
 		if(token_price == 0){
 			token_price = 1;
 		}
@@ -502,13 +508,14 @@ function outFunc111() {
 		 success: function(result){
 			var usd = parseFloat(result.USD);
 				var eth_dollar = parseFloat(eth)*usd;
-				var amount_epr = eth_dollar/parseFloat(token_price);
-				var bonus_epr = (amount_epr*extra_bonus)/100;
-				var amount = amount_epr+bonus_epr;
+				//var amount_epr = eth_dollar/parseFloat(token_price);
+				//var bonus_epr = (amount_epr*extra_bonus)/100;
+				//var amount = amount_epr+bonus_epr;
+				var amount = eth_dollar*dollar_to_safeada;
 					amount = amount.toFixed(2);
 					$('#eth_dollar').val(eth_dollar);
 					$('#eth_token').val(amount);					
-				$('#eth_epr').html('<div class="cash" >'+amount+' EPR</div><small>You will receive</small>');
+				$('#eth_epr').html('<div class="cash" >'+amount+' SafeAda</div><small>You will receive</small>');
 			
 		}
 	});
@@ -517,72 +524,76 @@ function outFunc111() {
 		$('#eth_epr').html('');
 	}
 	});
-	/*******************get ltc live rate*******************/
-	$('#litecoin_amount').keyup(function(){
-		var ltc = $('#litecoin_amount').val();
-		var token_price = $('#token_price').val();
-		var extra_bonus = $('#extra_bonus').val();
+	/******************get doge live arte*******************/
+	$('#doge_amount').keyup(function(){
+		var doge = $('#doge_amount').val();
+		//var token_price = $('#token_price').val();
+		//var extra_bonus = $('#extra_bonus').val();
+		var dollar_to_safeada = $('#dollar_to_safeada').val();
 		if(token_price == 0){
 			token_price = 1;
 		}
 		if(extra_bonus == 0){
 			extra_bonus = 1;
 		}		
-	if(ltc!="" && ltc!=0 && ltc>=parseFloat(0.01)){
+	if(doge!="" && doge!=0 && doge>=parseFloat(0.01)){
 	 $.ajax({
-		 url: "https://min-api.cryptocompare.com/data/price?fsym=LTC&tsyms=USD",
-		 method:'POST',
-		 success: function(result){
-				var usd = parseFloat(result.USD);
-				var ltc_dollar = parseFloat(ltc)*usd;
-				var amount_epr = ltc_dollar/parseFloat(token_price);
-				var bonus_epr = (amount_epr*extra_bonus)/100;
-				var amount = amount_epr+bonus_epr;
-				amount = amount.toFixed(2);
-				$('#ltc_dollar').val(ltc_dollar);
-				$('#ltc_token').val(amount);
-				$('#ltc_epr').html('<div class="cash" >'+amount+' EPR</div><small>You will receive</small>');
-			
-		}
-	});
-	}
-	else if(ltc=="" || ltc==0 || ltc<parseFloat(0.01)){
-		$('#ltc_epr').html('');
-	}
-	});
-	/******************get dash live rate********************/
-	$('#dash_amount').keyup(function(){
-		var dash = $('#dash_amount').val();
-			var token_price = $('#token_price').val();
-		var extra_bonus = $('#extra_bonus').val();
-		if(token_price == 0){
-			token_price = 1;
-		}
-		if(extra_bonus == 0){
-			extra_bonus = 1;
-		}		
-	if(dash!="" && dash!=0 && dash>=parseFloat(0.01)){
- $.ajax({ 
-		 url: "https://min-api.cryptocompare.com/data/price?fsym=DASH&tsyms=USD",
+		 url: "https://min-api.cryptocompare.com/data/price?fsym=DOGE&tsyms=USD",
 		 method:'POST',
 		 success: function(result){
 			var usd = parseFloat(result.USD);
-				var dash_dollar = parseFloat(dash)*usd;
-				var amount_epr = dash_dollar/parseFloat(token_price);
-				var bonus_epr = (amount_epr*extra_bonus)/100;
-				var amount = amount_epr+bonus_epr;
-				amount = amount.toFixed(2);
-				$('#dash_dollar').val(dash_dollar);
-				$('#dash_token').val(amount);
-				$('#dash_epr').html('<div class="cash" >'+amount+' EPR</div><small>You will receive</small>');
+				var doge_dollar = parseFloat(doge)*usd;
+				//var amount_epr = doge_dollar/parseFloat(token_price);
+				//var bonus_epr = (amount_epr*extra_bonus)/100;
+				//var amount = amount_epr+bonus_epr;
+				var amount = doge_dollar*dollar_to_safeada;
+					amount = amount.toFixed(2);
+					$('#doge_dollar').val(doge_dollar);
+					$('#doge_token').val(amount);					
+				$('#doge_epr').html('<div class="cash" >'+amount+' SafeAda</div><small>You will receive</small>');
 			
 		}
 	});
 	}
-	else if(dash=="" || dash==0 || dash<parseFloat(0.01)){
-		$('#dash_epr').html('');
+	else if(doge=="" || doge==0 || doge<parseFloat(0.01)){
+		$('#doge_epr').html('');
 	}
+	});	
+	/******************get bnb live arte*******************/
+	$('#bnb_amount').keyup(function(){
+		var bnb = $('#bnb_amount').val();
+		//var token_price = $('#token_price').val();
+		//var extra_bonus = $('#extra_bonus').val();
+		var dollar_to_safeada = $('#dollar_to_safeada').val();
+		if(token_price == 0){
+			token_price = 1;
+		}
+		if(extra_bonus == 0){
+			extra_bonus = 1;
+		}		
+	if(bnb!="" && bnb!=0 && bnb>=parseFloat(0.01)){
+	 $.ajax({
+		 url: "https://min-api.cryptocompare.com/data/price?fsym=BNB&tsyms=USD",
+		 method:'POST',
+		 success: function(result){
+			var usd = parseFloat(result.USD);
+				var bnb_dollar = parseFloat(bnb)*usd;
+				//var amount_epr = bnb_dollar/parseFloat(token_price);
+				//var bonus_epr = (amount_epr*extra_bonus)/100;
+				//var amount = amount_epr+bonus_epr;
+				var amount = bnb_dollar*dollar_to_safeada;
+					amount = amount.toFixed(2);
+					$('#bnb_dollar').val(bnb_dollar);
+					$('#bnb_token').val(amount);					
+				$('#bnb_epr').html('<div class="cash" >'+amount+' SafeAda</div><small>You will receive</small>');
+			
+		}
 	});
+	}
+	else if(bnb=="" || bnb==0 || bnb<parseFloat(0.01)){
+		$('#bnb_epr').html('');
+	}
+	});		
 /**************to save btc invest****************/
 function save_btc(){
 	var base_url = "<?php echo base_url(); ?>";
@@ -607,7 +618,11 @@ function save_btc(){
 				data:datastring,
 				dataType: "json",
 				success: function(datas){
-					if(datas.error=="ok"){
+					if(datas.error!="ok"){
+						$('.btc_error').html(datas.error);
+						$('#btc_but').val("Invest Now");
+						return false;
+					}
 					var address =datas.result.address;
 					var qrcode_url = datas.result.qrcode_url;
 					var amount = datas.result.amount;
@@ -615,11 +630,10 @@ function save_btc(){
 					var txn_id = datas.result.txn_id;
 					var epr = datas.result.epr_token;
 					//<span class="tooltiptext" id="myTooltip111">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctionsss()" onmouseout="outFunc111()" class="gry-btn btn btn-primary" value=""/>
-						var html = '<div class="row btc_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-btc.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="btc11" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip11">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctionss()" onmouseout="outFunc11()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="btc111" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' BTC</span><label class="lbl_inst">Invested Amount</label></div> <div class="box-data"><span class="amount_invst">'+epr+' EPR</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
+						var html = '<div class="row btc_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-btc.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="btc11" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip11">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctionss()" onmouseout="outFunc11()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="btc111" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' BTC</span><label class="lbl_inst">Invested Amount</label></div> <div class="box-data"><span class="amount_invst">'+epr+' SafeAda</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
 					
 					$('.btc_div').css('display','none');
 					$('.transac').html(html);
-				}
 				}
 	});
 	}
@@ -648,6 +662,11 @@ function save_eth(){
 				data:datastring,
 				dataType: "json",
 				success: function(datas){
+					if(datas.error!="ok"){
+						$('.eth_error').html(datas.error);
+						$('#eth_but').val("Invest Now");
+						return false;
+					}
 					var address =datas.result.address;
 					var qrcode_url = datas.result.qrcode_url;
 					var amount = datas.result.amount;
@@ -655,7 +674,7 @@ function save_eth(){
 					var txn_id = datas.result.txn_id;
 					var epr = datas.result.epr_token;
 					//<span class="tooltiptext" id="myTooltip222">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions222()" onmouseout="outFunc222()" class="gry-btn btn btn-primary" value=""/>
-					var html = '<div class="row eth_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-eth.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="eth22" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip22">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions22()"  onmouseout="outFunc22()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="eth222" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' ETH</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' EPR</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
+					var html = '<div class="row eth_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-eth.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="eth22" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip22">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions22()"  onmouseout="outFunc22()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="eth222" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' ETH</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' SafeAda</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
 					
 					
 					
@@ -665,77 +684,94 @@ function save_eth(){
 	});
 	}
 }
-/*to save ltc invest amount*/
-function save_ltc(){
+/***********to save doge invest amount*/
+function save_doge(){
 	var base_url = "<?php echo base_url(); ?>";
-		var ltc = $('#litecoin_amount').val();
-		var token = $('#ltc_token').val();
-			if(ltc==""){
-		$('.ltc_error').html("Please enter the amount.");
+		var doge = $('#doge_amount').val();
+		var token = $('#doge_token').val();
+	if(doge==""){
+		$('.doge_error').html("Please enter the amount.");
 		return false;
 	}
-	else if(ltc==0 || ltc<parseFloat(0.01)){
-					$('.ltc_error').html("Minimum amount should be 0.01 LTC");
+	else if(doge==0 || doge<parseFloat(0.01)){
+					$('.doge_error').html("Minimum amount should be 0.01 DOGE");
 					return false;
 				}
 	else if(token==""){
 		return false;
 	}
 	else{
-	var datastring = $("#ltc_form").serialize();
-		$('#ltc_but').val("Loading...");
-	$.ajax({url: "<?php echo base_url(); ?>Invest/createTransaction",
+	var datastring = $("#doge_form").serialize();
+		$('#doge_but').val("Loading...");
+		$.ajax({url: "<?php echo base_url(); ?>Invest/createTransaction",
 				method:"POST",
 				data:datastring,
 				dataType: "json",
 				success: function(datas){
+					if(datas.error!="ok"){
+						$('.doge_error').html(datas.error);
+						$('#doge_but').val("Invest Now");
+						return false;
+					}
 					var address =datas.result.address;
 					var qrcode_url = datas.result.qrcode_url;
 					var amount = datas.result.amount;
 					var status_url = datas.result.status_url;
 					var txn_id = datas.result.txn_id;
 					var epr = datas.result.epr_token;
-					//<span class="tooltiptext" id="myTooltip333">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions333()" onmouseout="outFunc333()" class="gry-btn btn btn-primary" value=""/>
-					var html = '<div class="row ltc_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-ltc.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="ltc33" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip33">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions33()" onmouseout="outFunc33()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="ltc333" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' LTC</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' EPR</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
-					$('.ltc_div').css('display','none');
-					$('.transac_ltc').html(html);
+					//<span class="tooltiptext" id="myTooltip222">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions222()" onmouseout="outFunc222()" class="gry-btn btn btn-primary" value=""/>
+					var html = '<div class="row doge_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-doge.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="doge22" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip22">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions22()"  onmouseout="outFunc22()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="doge222" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' DOGE</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' SafeAda</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
+					
+					
+					
+					$('.doge_div').css('display','none');
+					$('.transac_doge').html(html);
 				}
 	});
 	}
 }
-/*to save dash invest amount*/
-function save_dash(){
-	var base_url = "<?php echo base_url(); ?>"
-	var dash = $('#dash_amount').val();
-	var token = $('#dash_token').val();
-	if(dash==""){
-		$('.dash_error').html("Please enter the amount.");
+/***********to save bnb invest amount*/
+function save_bnb(){
+	var base_url = "<?php echo base_url(); ?>";
+		var bnb = $('#bnb_amount').val();
+		var token = $('#bnb_token').val();
+	if(bnb==""){
+		$('.bnb_error').html("Please enter the amount.");
 		return false;
 	}
-	else if(dash==0 || dash<parseFloat(0.01)){
-					$('.dash_error').html("Minimum amount should be 0.01 DASH");
+	else if(bnb==0 || bnb<parseFloat(0.01)){
+					$('.bnb_error').html("Minimum amount should be 0.01 BNB");
 					return false;
 				}
 	else if(token==""){
 		return false;
-	}else{
-	var datastring = $("#dash_form").serialize();
-	$('#dash_but').val("Loading...");
- $.ajax({url: "<?php echo base_url(); ?>Invest/createTransaction",
+	}
+	else{
+	var datastring = $("#bnb_form").serialize();
+		$('#bnb_but').val("Loading...");
+		$.ajax({url: "<?php echo base_url(); ?>Invest/createTransaction",
 				method:"POST",
 				data:datastring,
 				dataType: "json",
 				success: function(datas){
+					if(datas.error!="ok"){
+						$('.bnb_error').html(datas.error);
+						$('#bnb_but').val("Invest Now");
+						return false;
+					}
 					var address =datas.result.address;
 					var qrcode_url = datas.result.qrcode_url;
 					var amount = datas.result.amount;
 					var status_url = datas.result.status_url;
 					var txn_id = datas.result.txn_id;
 					var epr = datas.result.epr_token;
-					//<span class="tooltiptext" id="myTooltip444">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions444()" onmouseout="outFunc444()" class="gry-btn btn btn-primary" value=""/>
-				var html = '<div class="row dash_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-dash.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="dash44" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip44">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions44()" onmouseout="outFunc44()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="dash444" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' DASH</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' EPR</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
-					$('.dash_div').css('display','none');
-					$('.transac_dash').html(html);
+					//<span class="tooltiptext" id="myTooltip222">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions222()" onmouseout="outFunc222()" class="gry-btn btn btn-primary" value=""/>
+					var html = '<div class="row bnb_div"><div class="col-lg-2"> <div class="frame"><span class="helper"></span><img src="'+base_url+'assets/new_design/dist/img/coinx-bnb.png"></div></div><div class="col-lg-5"><p>Address:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+address+'" id="bnb22" readonly="readonly"><div class="copy_div ds ds_tool tooltip"><span class="tooltiptext" id="myTooltip22">Click Icon to copy</span><i class="fa fa-clipboard" style="font-size:12px"></i><input type="button" onclick="myFunctions22()"  onmouseout="outFunc22()" class="gry-btn btn btn-primary" value=""/></div></div><br/><div class="error-vlidation-err"></div><p>Transaction Id:</p><div class="inp_fa"><input class="www pamnt-add form-control" type="text" value="'+txn_id+'" id="bnb222" readonly="readonly"><div class="copy_div ds ds_tool tooltip"></div></div><br/><div class="box-data"><span class="amount_invst">'+amount+' BNB</span><label class="lbl_inst">Invested Amount</label></div><div class="box-data"><span class="amount_invst">'+epr+' SafeAda</span><label class="lbl_inst">You will receive</label></div></div><div class="col-lg-5"><div class="area"><img class="qr_code" src="'+qrcode_url+'" title="scan code"></div></div>';
+					
+					
+					
+					$('.bnb_div').css('display','none');
+					$('.transac_bnb').html(html);
 				}
 	});
 	}

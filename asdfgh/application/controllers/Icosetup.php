@@ -45,6 +45,7 @@ class Icosetup extends CI_Controller {
 		$this->form_validation->set_rules('token_supply', '', 'required');
 		$this->form_validation->set_rules('token_price', '', 'required|callback_numeric_decimal');
 		$this->form_validation->set_rules('extra_bonus', '', 'required');
+		$this->form_validation->set_rules('dollar_to_safeada', '', 'required');
 		if($this->form_validation->run() == FALSE){				
 			$this->load->template('ico_setup',$datas); 
 			
@@ -56,6 +57,7 @@ class Icosetup extends CI_Controller {
 			$data['token_supply'] = $this->security->sanitize_filename($this->input->post('token_supply'));
 			$data['token_price'] = $this->security->sanitize_filename($this->input->post('token_price'));
 			$data['extra_bonus'] = $this->security->sanitize_filename($this->input->post('extra_bonus'));
+			$data['dollar_to_safeada'] = $this->security->sanitize_filename($this->input->post('dollar_to_safeada'));
 			$data['ico_type'] = $ico_type =  $this->security->sanitize_filename($this->input->post('ico_type'));
 			
 			$check_ico = $this->ico_model->check_ico($ico_type);

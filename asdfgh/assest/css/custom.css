@@ -88,6 +88,7 @@ body.nav-sm .profile {
 
 .menu_section {
     margin-bottom: 35px;
+	cursor: default;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 

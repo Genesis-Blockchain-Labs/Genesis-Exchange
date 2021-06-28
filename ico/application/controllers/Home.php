@@ -25,7 +25,7 @@ class Home extends CI_Controller {
 			$reffral .= '<tr>
 				<td>'.substr($val['username'],0,3).'xxxx</td>
 				<td>'.substr($val['reffred_username'],0,3).'xxxx</td>
-				<td class="font-bold"><span class="number1">'.$val['coins'].'</span> EPR Token</td>
+				<td class="font-bold"><span class="number1">'.$val['coins'].'</span> BDLR Token</td>
 				<td>'.$val['ipn_date'].'</td>
 			</tr>';
 		}

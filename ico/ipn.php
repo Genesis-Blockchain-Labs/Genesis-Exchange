@@ -12,7 +12,7 @@
             foreach ($_POST as $k => $v) {
                 $report .= "|$k| = |$v|\n";
             }
-            mail($cp_debug_email, 'CoinPayments IPN Enpor', $report);
+            mail($cp_debug_email, 'CoinPayments IPN BlackDollar', $report);
         }
         die('IPN Error: '.$error_msg);
     }
@@ -61,7 +61,7 @@
     //     //payment is pending, you can optionally add a note to the order page
     // }
 
-        $to = "malkeet.boominfotech@gmail.com";
+        $to = "mukesh.immanent@gmail.com";
         $subject = "Ok IPN";
         $txt = "Malkeet you are Great!";    
 

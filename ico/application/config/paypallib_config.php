@@ -5,7 +5,7 @@
 // ------------------------------------------------------------------------
 
 // Use PayPal on Sandbox or Live
-$config['sandbox'] = FALSE; // FALSE for live environment
+$config['sandbox'] = TRUE; // FALSE for live environment
 
 // PayPal Business Email ID
 $config['business'] = 'info@codexworld.com';

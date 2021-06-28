@@ -24,14 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://dev.boonvc.demodemo.ga/manage/';
-$config['base_url'] = 'http://enpor.demodemodemo.ga/asdfgh/';
+$config['base_url'] = 'http://demodemodemo.info/safecardano/asdfgh/';
 $config['encryption_key'] = "!@#$%^&*";
-define("ADMIN_EMAIL", "malkeet.boominfotech@gmail.com");
-define('S_PATH','/var/sentora/hostdata/demodemoga/public_html/enpor_demodemodemo_ga/uploads/kyc/');
+define("ADMIN_EMAIL", "super@admin.com");
+define('S_PATH','/var/www/html/safecardano/uploads/kyc/');
 
-define('S_PA','/var/sentora/hostdata/demodemoga/public_html/enpor_demodemodemo_ga/img/');
-define('SITE_BASE_URL','http://enpor.demodemodemo.ga/'); 
-define('KYC_IMAGE_PATH','http://enpor.demodemodemo.ga/uploads/kyc/');
+define('S_PA','/var/www/html/safecardano/img/');
+define('SITE_BASE_URL','http://demodemodemo.info/safecardano/'); 
+define('KYC_IMAGE_PATH','http://demodemodemo.info/safecardano/uploads/kyc/');
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -401,7 +401,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= 'enpor.demodemodemo.ga';
+$config['cookie_domain']	= 'demodemodemo.info';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;

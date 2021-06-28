@@ -13,9 +13,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 
 define('DB_PREFIX', 'ico_');
-define('DOMAIN_NAME', 'Enpor');
-define('SHORT_DOMAIN_NAME', 'EPR');
-define('DOMAIN_EMAIL', 'info@enpor.com');
+define('DOMAIN_NAME', 'SafeCardano');
+define('SHORT_DOMAIN_NAME', 'SafeAda');
+define('DOMAIN_EMAIL', 'iqbalsingh26320@gmail.com');
 define('DOMAIN_CUURENCY', '0.5');
 
 defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE); 
@@ -105,5 +105,5 @@ define('CP_DEBUG_EMAIL', 'malkeet.boominfotech@gmail.com');
 define('ACCOUNT_SID', 'ACa560b8be14d7807067ae86b9d83ab96f'); 
 define('AUTH_TOKEN', '19804d5a373ad97c1b3b5ad1f8eee030'); 
 //////////////////////////////////partners/events url image/////////////////////////////
-define('PARTNER_URL', 'http://enpor.demodemodemo.ga/');
-define('SENDGRIDKEY', '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'); 
+define('PARTNER_URL', 'http://demodemodemo.info/safecardano/');
+define('SENDGRIDKEY', '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'); 

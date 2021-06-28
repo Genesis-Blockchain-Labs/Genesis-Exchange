@@ -211,6 +211,32 @@
 									echo form_input($data);
 									?><span class="error-form-dv"><?php echo form_error('extra_bonus'); ?></span>
 									</div>
+									
+									<div>
+									<p><label>1 Dollar(To SafeAda): </label> </p><?php	
+									if(!empty($pro_ico['dollar_to_safeada'])){
+									$data = array(
+									'name'          => 'dollar_to_safeada',
+									'type'         => 'number',
+									'value'         => $pro_ico['dollar_to_safeada'],
+									'class'         => 'form-control',
+									'min'			=>'1',
+									'autocomplete' => 'off',
+									);
+									}
+									else{
+									$data = array(
+									'name'          => 'dollar_to_safeada',
+									'type'         => 'number',
+									'value'         => set_value('dollar_to_safeada'),
+									'class'         => 'form-control',
+									'min'			=>'1',
+									'autocomplete' => 'off',
+									);
+									}
+									echo form_input($data);
+									?><span class="error-form-dv"><?php echo form_error('dollar_to_safeada'); ?></span>
+									</div>
 									<p><input type="hidden" name="ico_type" value="pre_ico" /></p>
 									
 								</div>

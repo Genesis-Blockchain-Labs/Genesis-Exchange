@@ -1,5 +1,3 @@
-<?php header("Location: http://enpor.demodemodemo.ga/"); /* Redirect browser */die;
-?>
 <!doctype html>
 <html class="no-js" lang="en">
         <head>

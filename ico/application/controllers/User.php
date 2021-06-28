@@ -117,7 +117,7 @@ class User extends CI_Controller {
 				$check_ip_block = $this->user_model->check_ip_block($this->security->xss_clean($ip_logs['ip_address']));
 				if($check_ip_block)
 				{
-					$data['error_msg'] = 'Sorry for the inconvenience but your IP address is blocked due to security reasons please contact enpor team for support.';
+					$data['error_msg'] = 'Sorry for the inconvenience but your IP address is blocked due to security reasons please contact SafeCardano team for support.';
 					$this->load->view("includes/header",$data);
 					$this->load->view('login',$data);
 				}
@@ -148,7 +148,7 @@ class User extends CI_Controller {
 						$this->load->view("includes/header",$data);
 						$this->load->view('login',$data); 
 					}else if($user_data['status'] == '3'){
-						$data['error_msg'] = 'Your account has been temporarily suspended. Please contact enpor team to continue with your account.';
+						$data['error_msg'] = 'Your account has been temporarily suspended. Please contact SafeCardano team to continue with your account.';
 						$this->load->view("includes/header",$data);
 						$this->load->view('login',$data); 					
 					}else{						
@@ -237,7 +237,7 @@ class User extends CI_Controller {
 				
 				$msg = '';
 				$subject = 'Reset Password for '.DOMAIN_NAME.'!';
-				$template_id = '1d54e8bb-0bea-45f5-8e13-1f61db743462';
+				$template_id = 'd17293c0-c8be-4d2d-9a88-0c9ee9a98c40';
 				$user_data['token'] = base_url()."resetpass/?id=".$token; 
 				$user_data['refrence_link'] = base_url().'registration/?refid='.$user_data['reference_id'];
 				$this->send_email_user($email,$user_data,$subject,$template_id);
@@ -420,7 +420,7 @@ class User extends CI_Controller {
 						$user_data['refrence_link'] = base_url().'registration/?refid='.$referenace_id;
 						$user_data['token'] = base_url().'verify?id='.$token;				
 						$subject = 'Welcome To '.DOMAIN_NAME.'! Confirm Your Email'; 
-						$template_id = 'cf155c64-a29c-41dd-bd52-ce6ab1321577';
+						$template_id = '8c44deb6-8185-4c4e-b97c-ea02bb6adb87';
 						$this->send_email_user($email,$user_data,$subject,$template_id);
 					//	$this->registerMessage($user_data,$user_data['phone']);
 						$this->load->view('register_thank');				
@@ -429,7 +429,7 @@ class User extends CI_Controller {
 				else
 				{
 					$data['refid'] = $this->security->sanitize_filename($this->input->post('reference_code'));
-					$data['error_msg'] = 'Enpor registration has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
+					$data['error_msg'] = 'SafeCardano registration has been temporarily disabled. Please be patient we will get back to you soon. Stay connected with us.';
 					$this->load->view("includes/header");
 					$this->load->view('register',$data);
 				}
@@ -640,7 +640,7 @@ class User extends CI_Controller {
 		$mail->personalization[0]->addSubstitution("+token+", $data['token']);
 		$mail->personalization[0]->addSubstitution("+refferal+", $data['refrence_link']);
 		$mail->setTemplateId($template_id);
-		$sg = new \SendGrid('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');
+		$sg = new \SendGrid('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');
 		$response = $sg->client->mail()->send()->post($mail);
 	 }
 	/************************************************
@@ -659,7 +659,7 @@ class User extends CI_Controller {
 		foreach ($people as $number => $name)
 	   		{
 		        $sms = $client->account->messages->sendMessage(
-			"+442891042496",$number,"Your Enpor authentication code is: ".$message);
+			"+442891042496",$number,"Your SafeCardano authentication code is: ".$message);
 
 		}
 
@@ -690,9 +690,9 @@ class User extends CI_Controller {
 		$mail = new SendGrid\Mail($from, $subject, $to, $content);
 		$mail->personalization[0]->addSubstitution("+name+", $data['firstname']);
 		$mail->personalization[0]->addSubstitution("+code+", $data['code']);
-		$temp_id = 'acee2ebf-64f2-4fb1-88df-ee173f7accb2';
+		$temp_id = '41f27d4c-7c85-4eea-a52e-9f0f63debc08';
 		$mail->setTemplateId($temp_id);
-		$sg = new \SendGrid('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');
+		$sg = new \SendGrid('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');
 		$response = $sg->client->mail()->send()->post($mail); 
 	 }
 /*****************************************
@@ -740,10 +740,10 @@ class User extends CI_Controller {
 		        $sms = $client->account->messages->sendMessage(
 			"+442891042496",$number,'Hi '.$nameuser.',
 
-Thank you for signing up for Enpor.
+Thank you for signing up for SafeCardano.
 
 Best regards,
-Enpor Team.');
+SafeCardano Team.');
 
 		}
 

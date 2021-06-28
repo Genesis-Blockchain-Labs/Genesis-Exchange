@@ -25,9 +25,12 @@
 						<li><a href="<?php echo base_url(); ?>logs_detail">Users Log</a></li>					
 					   </ul> 
 				   </li> 
+				<!--   
 				<li>
 					<a href="<?php echo base_url(); ?>event"><i class="fa fa-calendar" aria-hidden="true"></i>Events Management</a> 
-				</li><li>
+				</li>
+				-->
+				<li>
 					<a href="<?php echo base_url(); ?>partner"><i class="fa fa-user" aria-hidden="true"></i>Partners Management</a> 
 				</li>  
 				<li>

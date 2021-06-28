@@ -8,6 +8,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model("user_model");
 		$this->load->model("Referral_model");
 		$this->load->model("authentication_model");	
+		$this->load->model("invest_model");
 		$this->load->helper('form');
 		$this->load->library('form_validation');
 		$this->load->helper('security');
@@ -36,9 +37,10 @@ class Dashboard extends CI_Controller {
 			$data['count_refrel_usr'] = $this->Dashboard_model->count_refrel_usr($this->security->xss_clean($refernce_id)); 		
 			$data['referel_total_invst'] = $this->Referral_model->referel_total_invst($refernce_id);
 			$data['total_site_coins'] = $this->Dashboard_model->total_ref_coins();
-			$data['total_invested_user'] = $this->Dashboard_model->total_invested_user();
+			//$data['total_invested_user'] = $this->Dashboard_model->total_invested_user();
 			$data['total_invested'] = $this->Dashboard_model->total_invest();
 			$data['percentage'] = $this->Dashboard_model->ico();
+			$data['ico_setup'] = $this->invest_model->ico_setup_data('pre_ico');
 			$this->load->view('new_dashboard',$data);
 		} 
 		else 
@@ -249,8 +251,7 @@ class Dashboard extends CI_Controller {
 		if(!empty($session_data))
 		{
 				if(!empty($_FILES['profile_pic']['name'])){
-					$uplod['file_names'] = $_FILES['profile_pic']['name'];
-					$uplod['file_name'] = time().$_FILES["profile_pic"]['name'];
+					$uplod['file_name'] = time().str_replace(" ","_",$_FILES["profile_pic"]['name']);
 					$uplod['file_size'] = $_FILES['profile_pic']['size'];
 					$uplod['file_tmp']  = $_FILES['profile_pic']['tmp_name'];
 					$uplod['file_type'] = $_FILES['profile_pic']['type'];
@@ -299,7 +300,6 @@ class Dashboard extends CI_Controller {
 		FUNTION for upload profile pic
 	**************************************/
 	public function upload_profie_pic($data){
-			$file_names = $upload['file_names'];
 			$file_name = $data['file_name'];
 			$file_size = $data['file_size'];
 			$file_tmp  = $data['file_tmp'];

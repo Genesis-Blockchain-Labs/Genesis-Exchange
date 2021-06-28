@@ -8,7 +8,7 @@
     <meta name="description" content="Hi, This is new sample template">
     <meta name="author" content="">
 
-    <title>Enpor</title>
+    <title>SafeCardano</title>
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>assets/new_design/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -18,7 +18,7 @@
   <body>
     <div class="container">
       <div class="logo text-center">
-		<a href="#"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="Enpor" /> </a>
+		<a href="#"><img src="<?php echo base_url(); ?>assets/images/logo.png" alt="SafeCardano" /> </a>
       </div>
     </div><!-- /.container -->
 		
@@ -40,7 +40,7 @@
 	<div class="row text-center">
 		<div class="col-md-12">
 			<div class="row">
-				<p>© Enpor All Rights Reserved </p>
+				<p>© SafeCardano All Rights Reserved </p>
 			</div>
 		</div>
 	</div>

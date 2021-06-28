@@ -31,7 +31,7 @@ $user_data = $this->session->userdata('user_data');
 					</div>
                     <div class="panel-body">
 					<i class="fa fa-bullhorn" aria-hidden="true"></i>
-						<h3>From Enpor</h3>
+						<h3>From SafeCardano</h3>
 						<hr>
 						<p class="lead">	<?php echo $user[0]->message; ?>
 						</p>		

@@ -385,23 +385,36 @@ a[data-toggle="collapse"] {
 .login-panel {
   font-family: 'Poppins', sans-serif;
   border-radius: 7px;
-  width: 302px;
+  width: 100%;
   margin: 0 auto;
 }
 .login-panel h3 {
   color: #e8b342;
   font-weight: 200;
   font-size: 23px;
+  text-align: center;
 }
 .login-panel .panel-body {
   padding: 0;
 }
 .login-panel .panel-body table {
-  width: 90%;
-  margin-left: 5%;
+  width: 100%;
+  margin-left: 0%;
+  padding: 0 20px;
+  margin-bottom: 0;
 }
 .login-panel .panel-body.user-settings .table-user-information > tbody > tr {
   border-bottom: 1px solid #424242;
+  display: inline-block;
+  width: 45%;
+  margin: 0 20px;
+}
+.full-width .table-user-information > tbody > tr{
+   width: 84% !important;
+   display: block !important;
+}
+.full-width .table-user-information > tbody > tr td{
+	display: block !important;
 }
 .login-panel .panel-body.user-settings .table-user-information > tbody > tr > th {
   font-size: 13px;
@@ -440,22 +453,35 @@ a[data-toggle="collapse"] {
   background: transparent;
   border: 1px solid #fff;
 }
+.login-panel .panel-body.user-settings .table-user-information > tbody > tr:last-child{
+   width: 96%;
+}
+.login-panel .panel-body.user-settings .table-user-information > tbody > tr:last-child td{
+	width: 200px;
+    margin: 0 auto;
+    display: block;
+}
 .login-panel .login-bottom {
-  margin-top: 20px;
-  margin-left: 5%;
+  margin-top: 0px;
+  margin-left: 0%;
   padding-bottom: 20px;
   color: #c6c6c6;
   font-weight: 300;
   font-size: 11px;
   line-height: 18px;
+  text-align: center;
 }
 .login-panel .login-bottom a {
   color: #fff;
 }
 .login-panel .g-recaptcha {
-    /* background: #000000; */
-    position: absolute;
+        position: absolute;
+    width: 303px;
     bottom: -95px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .my-recaptcha {
@@ -547,12 +573,13 @@ select:-webkit-autofill:focus {
 
 .create-box {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -151px;
-  margin-top: -240px;
-  width: 302px;
-  height: 550px;
+    left: 0%;
+    top: 20%;
+    margin-left: 0;
+    width: 900px;
+    height: 550px;
+    right: 0;
+    margin: 0 auto;
 }
 
 

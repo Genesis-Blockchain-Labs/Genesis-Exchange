@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <?php 
+header("Location: http://demodemodemo.info/safecardano/ico/login");
 $ip_address = $_SERVER['REMOTE_ADDR'];
 
-$url = "http://enpor.demodemodemo.ga/ico/Home/get_website_status/".$ip_address;
+$url = "http://demodemodemo.info/safecardano/ico/Home/get_website_status/".$ip_address;
 //  Initiate curl
 $ch = curl_init();
 // Disable SSL verification
@@ -17,17 +18,17 @@ $result=curl_exec($ch);
 curl_close($ch);
 
 // Will dump a beauty json :3
-
+ 
 $data = json_decode($result);
 
 $web_status = $data->web_status;
 $ip = $data->ip;
 if($web_status->website_status==0){
-	header('location:http://enpor.demodemodemo.ga/ico/mantainance');
+	header('location:http://demodemodemo.info/safecardano/ico/mantainance');
 }
 if(!empty($ip))
 {
-	header('location:http://enpor.demodemodemo.ga/ico/ipblocked');
+	header('location:http://demodemodemo.info/safecardano/ico/ipblocked');
 }
 
 
@@ -40,7 +41,7 @@ if(!empty($ip))
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
 	<meta charset="utf-8" />
 	<meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
-	<title>ENPOR</title>
+	<title>SafeCardano</title>
 	<!-- StyleSheets -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -104,6 +105,7 @@ if(!empty($ip))
          <div>
             <div class="row text-center">
               <img src="img/logo.png" />
+			  <span class="text-white">The Black Dollar</span>
             </div>
             <div class="row text-center">
               <h1>Newsletter Signup</h1>
@@ -131,7 +133,10 @@ if(!empty($ip))
 	<div class="branding container-fluid fixed">
 		<div class="row">
 			<div class="col-xl-2">
-				<a href="#" class="brand"><img src="img/logo.png" alt="Logo white"/></a>
+				<a href="#" class="brand">
+					<img src="img/logo.png" alt="Logo white"/>
+					<span class="text-white">The Black Dollar</span>
+				</a>
 			</div>
 			<div class="col-xl-8">
 				<div class="menu">
@@ -142,6 +147,7 @@ if(!empty($ip))
 					</div>
 					<ul class="nav navMobil justify-content-center">
 						<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+						<!--
 						<li class="nav-item"><a href="#prod" class="nav-link">Products</a></li>
 						<li class="nav-item"><a href="#comp" class="nav-link">Company</a></li>
 						<li class="nav-item"><a href="#ico-roadmap" class="nav-link">RoadMap & ICO</a></li>
@@ -149,15 +155,16 @@ if(!empty($ip))
 						<li class="nav-item"><a href="#ref-prog" class="nav-link">Referral Program</a></li>
 						<li class="nav-item"><a href="#event" class="nav-link">Events & Partners</a></li>
 						<li class="nav-item"><a href="#faq1" class="nav-link">FAQ</a></li>
-						<li class="nav-item mobilLi"><a href="http://enpor.demodemodemo.ga/ico/login" class="nav-link">Login</a></li>
-						<li class="nav-item mobilLi"><a href="http://enpor.demodemodemo.ga/ico/signup" class="nav-link">Create Account</a></li>
+						-->
+						<li class="nav-item mobilLi"><a href="http://demodemodemo.info/safecardano/ico/login" class="nav-link">Login</a></li>
+						<li class="nav-item mobilLi"><a href="http://demodemodemo.info/safecardano/ico/signup" class="nav-link">Create Account</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-md-2">
 				<ul class="nav mobilNone justify-content-end">
-					<li class="nav-item"><a href="http://enpor.demodemodemo.ga/ico/login" class="nav-link">Login</a></li>
-					<li class="nav-item createColor"><a href="http://enpor.demodemodemo.ga/ico/signup" class="nav-link">Create Account</a></li>
+					<li class="nav-item"><a href="http://demodemodemo.info/safecardano/ico/login" class="nav-link">Login</a></li>
+					<li class="nav-item createColor"><a href="http://demodemodemo.info/safecardano/ico/signup" class="nav-link">Create Account</a></li>
 				</ul>
 			</div>
 		</div>
@@ -181,7 +188,7 @@ if(!empty($ip))
 										<h3 class="sr-contact">THE BRIDGE TO BORDERLESS FINANCE</h3>
 										<h4 class="sr-contact pr-5 pl-5">Welcome to the next revolution in bankng where regular banking meets blockchanin</h4>
 										<div class="mt-5">
-											<a class="btn btn-yellow" href="http://enpor.demodemodemo.ga/ico/login">Contribute</a>
+											<a class="btn btn-yellow" href="http://demodemodemo.info/safecardano/ico/login">Contribute</a>
 											<a class="btn btn-white" href="#">WhitePaper</a>
 										</div>
 									</div>
@@ -231,32 +238,32 @@ if(!empty($ip))
 						<div class="container">
 							<div class="cardHeader">
 								<h3>Cards</h3>
-								<p>There will be an Enpor card to suit every need. We will issue 4 types with exclusive features. ATM /POS withdrawal limits differ according to grade of card.</p>
+								<p>There will be an SafeCardano card to suit every need. We will issue 4 types with exclusive features. ATM /POS withdrawal limits differ according to grade of card.</p>
 							</div>
 							<div class="row">
 								<div class="col-md-12">
 									<ul class="tabHeader">
 										<li class="tabHeader-tab active">
 											<span>
-												<div class="title">Enpor Titaninum</div>
+												<div class="title">SafeCardano Titaninum</div>
 												<div class="content">Investor participating with the equivalent of 10 Bitcoin or more in the ICO</div>
 											</span>
 										</li>
 										<li class="tabHeader-tab">
 											<span>
-												<div class="title">Enpor Black Card</div>
+												<div class="title">SafeCardano Black Card</div>
 												<div class="content">Investor participating with the equivalent of 10 Bitcoin or more in the ICO</div>
 											</span>
 										</li>
 										<li class="tabHeader-tab">
 											<span>
-												<div class="title">Enpor Plantinum Card</div>
+												<div class="title">SafeCardano Plantinum Card</div>
 												<div class="content">Investor participating with the equivalent of 10 Bitcoin or more in the ICO</div>
 											</span>
 										</li>
 										<li class="tabHeader-tab">
 											<span>
-												<div class="title">Enpor Blue/Red Card</div>
+												<div class="title">SafeCardano Blue/Red Card</div>
 												<div class="content">Investor participating with the equivalent of 10 Bitcoin or more in the ICO</div>
 											</span>
 										</li>
@@ -267,7 +274,7 @@ if(!empty($ip))
 								<div class="tabItem">
 									<div class="row">
 										<div class="col-md-7">
-											<div class="tabtitle">Enpor Titanium</div>
+											<div class="tabtitle">SafeCardano Titanium</div>
 											<img src="img/cardicons/enpor-card1.png" class="img-mobile img-fluid d-md-none">
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
@@ -280,7 +287,7 @@ if(!empty($ip))
 								<div class="tabItem">
 									<div class="row">
 										<div class="col-md-7">
-											<div class="tabtitle">Enpor Black Card</div>
+											<div class="tabtitle">SafeCardano Black Card</div>
 											<img src="img/cardicons/enpor-card2.png" class="img-mobile img-fluid d-md-none">
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
 										</div>
@@ -292,7 +299,7 @@ if(!empty($ip))
 								<div class="tabItem">
 									<div class="row">
 										<div class="col-md-7">
-											<div class="tabtitle">Enpor Plantinum Card</div>
+											<div class="tabtitle">SafeCardano Plantinum Card</div>
 											<img src="img/cardicons/platinum-final.png" class="img-mobile img-fluid d-md-none">
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
@@ -305,7 +312,7 @@ if(!empty($ip))
 								<div class="tabItem">
 									<div class="row">
 										<div class="col-md-7">
-											<div class="tabtitle">Enpor Blue/Red Card</div>
+											<div class="tabtitle">SafeCardano Blue/Red Card</div>
 											<img src="img/cardicons/blue-final.png" data-src2="img/cardicons/red.png" class="img-mobile img-fluid d-md-none js-imgslider">
 											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum labore, temporibus possimus enim deserunt doloremque natus dolores aperiam libero nemo, ducimus amet facere. Dolorum non ea exercitationem, eveniet esse animi!</p>
 										</div>
@@ -633,7 +640,7 @@ if(!empty($ip))
 							<div class="container">
 								<div class="main-header">
 									<h3 class="sr-contact">ICO</h3>
-									<p class="sr-contact">To implement Enpor’s vision we are launching an initial coin offering (ICO) to ıssue EPR tokens on the public blockchain.
+									<p class="sr-contact">To implement SafeCardano’s vision we are launching an initial coin offering (ICO) to ıssue EPR tokens on the public blockchain.
 										<br>250.000.000 EPR Tokens will beissued during pre ICO, Which will last one week from [date] to [date].
 										<br>The Price of the Token will be 0.1 USD per EPR
 									</p>
@@ -1264,7 +1271,7 @@ if(!empty($ip))
 											<a href="#" class="footer-icon"><i class="fa fa-twitter"></i></a>
 										</div>
 										<div class="col-md-4 text-md-center pb-3 pt-3">
-											&copy; 2018 Enpor. All rights reserved.
+											&copy; 2018 SafeCardano. All rights reserved.
 										</div>
 										<div class="col-md-4 text-md-right">
 											<a href="#" class="link-hover">Terms&amp;Conditions</a>
@@ -1294,7 +1301,7 @@ if(!empty($ip))
 		<script type="text/javascript">
 			$("#idForm").submit(function(e) {
 
-			    var url = "http://enpor.demodemodemo.ga/ico/Home/newsletter"; // the script where you handle the form input.
+			    var url = "http://demodemodemo.info/safecardano/ico/Home/newsletter"; // the script where you handle the form input.
 
 			    $.ajax({
 			           type: "POST",
@@ -1315,7 +1322,7 @@ if(!empty($ip))
 		<script>
 	$(document).ready(function(){
 		
-		$.ajax({ url: "http://enpor.demodemodemo.ga/ico/Home/icoBonusDate",
+		$.ajax({ url: "http://demodemodemo.info/safecardano/ico/Home/icoBonusDate",
         context: document.body,
 		dataType: "json",
         success: function(res){

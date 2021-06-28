@@ -135,7 +135,7 @@ class Kyc extends CI_Controller {
 		$user = $this->kyc_model->kycDetail($id);
 		$this->load->helper('download'); 
 		$fileName = $user->image; 
-		$data['download_file'] = 'http://enpor_demodemodemo_ga/uploads/kyc/'.$user->image;   
+		$data['download_file'] = 'http://demodemodemo.info/blackDollar/uploads/kyc/'.$user->image;   
 		$this->load->view("download_view",$data);
 		redirect('kyc_detail/'. $id);                      
 	}	 	

@@ -181,6 +181,11 @@ a.support-link.submit {
 	float: left;
     font-size: 17px;	
 }
+tbody > tr{display: inline-block;
+    width: 49%;}
+
+
+
 </style>
 </head>
 <body>    
