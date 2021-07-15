@@ -33,7 +33,7 @@ $user_data = $this->session->userdata('user_data');
 													
 													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['currency']; ?></td>
 													
-													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['token']; ?>  BDLR</td>
+													<td <?php if($transaction['status']==2){?> class="confirm_bar" <?php }?> ><?php echo $transaction['token']; ?>  SafeAda</td>
 													
 													<td><?php echo $transaction['date']; ?></td>
 													<td><span class="<?php if($transaction['status']==-1) {

@@ -24,14 +24,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 //$config['base_url'] = 'http://dev.boonvc.demodemo.ga/manage/';
-$config['base_url'] = 'http://demodemodemo.info/safecardano/asdfgh/';
+$config['base_url'] = 'https://exchange.safecardano.com/asdfgh/';
 $config['encryption_key'] = "!@#$%^&*";
 define("ADMIN_EMAIL", "super@admin.com");
 define('S_PATH','/var/www/html/safecardano/uploads/kyc/');
 
 define('S_PA','/var/www/html/safecardano/img/');
-define('SITE_BASE_URL','http://demodemodemo.info/safecardano/'); 
-define('KYC_IMAGE_PATH','http://demodemodemo.info/safecardano/uploads/kyc/');
+define('SITE_BASE_URL','https://exchange.safecardano.com/'); 
+define('KYC_IMAGE_PATH','https://exchange.safecardano.com/uploads/kyc/');
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -43,7 +43,7 @@ define('KYC_IMAGE_PATH','http://demodemodemo.info/safecardano/uploads/kyc/');
 |
 */
 $config['index_page'] = '';
-define("HTTP", "http://");
+define("HTTP", "https://");
 define("ENCRYPTION_KEY", "!@#$%^&*");
 /*
 |--------------------------------------------------------------------------
@@ -401,7 +401,7 @@ $config['sess_regenerate_destroy'] = FALSE;
 |
 */
 $config['cookie_prefix']	= '';
-$config['cookie_domain']	= 'demodemodemo.info';
+$config['cookie_domain']	= 'exchange.safecardano.com';
 $config['cookie_path']		= '/';
 $config['cookie_secure']	= FALSE;
 $config['cookie_httponly'] 	= FALSE;

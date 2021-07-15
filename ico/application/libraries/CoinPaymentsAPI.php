@@ -58,7 +58,7 @@ class CoinPaymentsAPI {
 	 * @param ipn_url Optionally set an IPN handler to receive notices about this transaction. If ipn_url is empty then it will use the default IPN URL in your account.
 	 * @param buyer_email Optionally (recommended) set the buyer's email so they can automatically claim refunds if there is an issue with their payment.
 	 */
-	public function CreateTransactionSimple($amount, $currency1, $currency2, $ipn_url='http://blackdollar.demodemodemo.ga/wallet/ipn',$userid, $tokens, $dollar_amount, $address='') {		
+	public function CreateTransactionSimple($amount, $currency1, $currency2, $ipn_url='http://blackdollar.demodemodemo.ga/wallet/ipn',$userid, $tokens, $dollar_amount, $buyer_email, $address='') {		
 		$req = array(
 			'amount' => $amount,
 			'currency1' => $currency1,
@@ -67,7 +67,8 @@ class CoinPaymentsAPI {
 			'address' => $address,
 			'item_number' => $userid,
 			'custom' => $tokens,
-			'item_name' => $dollar_amount
+			'item_name' => $dollar_amount,
+			'buyer_email' => $buyer_email
 		);
 		return $this->api_call('create_transaction', $req);
 	}

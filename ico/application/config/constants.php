@@ -91,19 +91,15 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-
-
-
-
-define('PRIVATE_KEY', '0Ada59aabd1734645Ae1B8262f7fE5cb002eB0286c42D40878ef609911072f07'); 
-define('PUBLIC_KEY', '48e20e478c690270c4d46c4f466138852f2253e68769359fba6931421331bfcc'); 
-define('CP_MERCHANT_ID', 'c0f821db80068f21d7b321f9524ae8af'); 
-define('CP_IPN_SECRET', 'jkljfksjdflajfoiweriojlkjadlfskjlwe'); 
-define('CP_DEBUG_EMAIL', 'malkeet.boominfotech@gmail.com'); 
+define('PRIVATE_KEY', '9a6E58a7bb2249538D23015c9C9f689CE5b68fcB8980c35d6f17d851b146e44c'); 
+define('PUBLIC_KEY', 'f195d6b074048e3abba236e4d27e6332d71014add135ff7cf64a2f9f3b939b0b'); 
+define('CP_MERCHANT_ID', '0d81c3ccf3b41b4c53589b4a7a664f19'); 
+define('CP_IPN_SECRET', 'asdfqwer1234'); 
+define('CP_DEBUG_EMAIL', 'panduchinna54@gmail.com');
 
 //////////////////////////Twilio credentioals////////////////////////////
 define('ACCOUNT_SID', 'ACa560b8be14d7807067ae86b9d83ab96f'); 
 define('AUTH_TOKEN', '19804d5a373ad97c1b3b5ad1f8eee030'); 
 //////////////////////////////////partners/events url image/////////////////////////////
-define('PARTNER_URL', 'http://demodemodemo.info/safecardano/');
+define('PARTNER_URL', 'https://exchange.safecardano.com/');
 define('SENDGRIDKEY', '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'); 

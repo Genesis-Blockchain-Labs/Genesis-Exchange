@@ -55,7 +55,7 @@ class Invest extends CI_Controller{
 		Function to create transaction for coin payment
 	***********************************************/
 	public function createTransaction()
-	{ 
+	{
 		$amount = $this->security->sanitize_filename($this->input->post('amount'));
 		$currency1 = $this->security->sanitize_filename($this->input->post('currency'));
 		$currency2 = $this->security->sanitize_filename($this->input->post('currency'));
@@ -66,8 +66,8 @@ class Invest extends CI_Controller{
 		$users= $this->user_model->get_usr_data($this->security->xss_clean($user_id));
 		$buyer_email = $users['email'];
 		$update_data['coin_type'] = $this->security->sanitize_filename($this->input->post('coin_type'));
-		$ipn_url =  base_url().'wallet/getipndetailfromcoinpayment';
-		$result['response'] = $this->cps->CreateTransactionSimple($amount, $currency1, $currency2, $ipn_url, $user_id, $token, $dollar_amount);
+		$ipn_url =  base_url().'index.php/wallet/getipndetailfromcoinpayment';
+		$result['response'] = $this->cps->CreateTransactionSimple($amount, $currency1, $currency2, $ipn_url, $user_id, $token, $dollar_amount, $buyer_email);
 		//$result['response'] = $this->cps->CreateTransactionSimple('0.0001', $currency1, $currency2, $ipn_url, $buyer_email, $user_id, $token, $dollar_amount);
 		$update_data['date'] = date('Y-m-d h:i:s');
 		$update_data['address'] = $result['response']['result']['address'];
@@ -88,9 +88,8 @@ class Invest extends CI_Controller{
 			$return = $this->invest_model->save_investment($this->security->xss_clean($user_id),$this->security->xss_clean($update_data)); 
 		}
 		if($return){
-					echo json_encode($result['response']);
-				}
+			echo json_encode($result['response']);
+		}
 	}
-
 }
 ?>
