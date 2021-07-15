@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-header("Location: http://demodemodemo.info/safecardano/ico/login");
+header("Location: https://exchange.safecardano.com/ico/login");
 $ip_address = $_SERVER['REMOTE_ADDR'];
 
 $url = "http://demodemodemo.info/safecardano/ico/Home/get_website_status/".$ip_address;

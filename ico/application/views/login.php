@@ -115,7 +115,7 @@
                     Don't have account yet? <a href="<?php echo base_url()?>signup">Sign up</a><br>
                     Forgot password? <a href="<?php echo base_url()?>forgot">Recover</a>
                 </div>
-				 <div class="g-recaptcha" data-sitekey="6LdFHZkaAAAAANKYSE9AKsY_GoDNHXM2zRDSFebl" data-theme="dark"></div>
+				 <div class="g-recaptcha" data-sitekey="6Ler6WIbAAAAAHIJVMVgOjdMBKsoW71qZwYLqoUE" data-theme="dark"></div>
 				<div class="g-captcha-error error-vlidation"><?php echo form_error('g-recaptcha-response'); ?></div>
             <?php echo form_close(); ?>
         </div>
