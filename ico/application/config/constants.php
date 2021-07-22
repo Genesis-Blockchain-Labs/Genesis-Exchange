@@ -103,3 +103,4 @@ define('AUTH_TOKEN', '19804d5a373ad97c1b3b5ad1f8eee030');
 //////////////////////////////////partners/events url image/////////////////////////////
 define('PARTNER_URL', 'https://exchange.safecardano.com/');
 define('SENDGRIDKEY', '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'); 
+define('RECAPTCHAKEY', '6Ler6WIbAAAAAHIJVMVgOjdMBKsoW71qZwYLqoUE'); 
