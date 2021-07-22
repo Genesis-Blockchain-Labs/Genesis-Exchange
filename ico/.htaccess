@@ -4,10 +4,10 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php/$1 [L,QSA] 
 
-RewriteEngine on 
-RewriteCond %{HTTP_REFERER} !^http://(quantreum.demodemodemo.ga\.)? [NC] 
-RewriteRule \.(jpe?g|gif|bmp|png|pdf)$ - [F,NC]
-ErrorDocument 403 /index.php
+#RewriteEngine on 
+#RewriteCond %{HTTP_REFERER} !^http://(quantreum.demodemodemo.ga\.)? [NC] 
+#RewriteRule \.(jpe?g|gif|bmp|png|pdf)$ - [F,NC]
+#ErrorDocument 403 /index.php
 
 <ifModule mod_gzip.c>
 mod_gzip_on Yes
