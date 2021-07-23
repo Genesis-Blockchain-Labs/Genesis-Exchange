@@ -238,6 +238,11 @@ form#primaryPostForm .box-data .inp_fa {
   background: #252525;
 }
 
+#sidebar .sidebar-header img {
+	width: 100%;
+	height: 100%;
+}
+
 #sidebar .sidebar-header strong {
   display: none;
   font-size: 1.8em;

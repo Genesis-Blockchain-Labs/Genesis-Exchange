@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 define('DB_PREFIX', 'ico_');
 define('DOMAIN_NAME', 'SafeCardano');
 define('SHORT_DOMAIN_NAME', 'SafeAda');
-define('DOMAIN_EMAIL', 'iqbalsingh26320@gmail.com');
+define('DOMAIN_EMAIL', 'support@safecardano.com');
 define('DOMAIN_CUURENCY', '0.5');
 
 defined('SHOW_DEBUG_BACKTRACE') OR define('SHOW_DEBUG_BACKTRACE', TRUE); 
@@ -102,5 +102,5 @@ define('ACCOUNT_SID', 'ACa560b8be14d7807067ae86b9d83ab96f');
 define('AUTH_TOKEN', '19804d5a373ad97c1b3b5ad1f8eee030'); 
 //////////////////////////////////partners/events url image/////////////////////////////
 define('PARTNER_URL', 'https://exchange.safecardano.com/');
-define('SENDGRIDKEY', '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'); 
+define('SENDGRIDKEY', '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'); 
 define('RECAPTCHAKEY', '6Ler6WIbAAAAAHIJVMVgOjdMBKsoW71qZwYLqoUE'); 

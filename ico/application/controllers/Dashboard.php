@@ -16,7 +16,7 @@ class Dashboard extends CI_Controller {
 		$this->load->library('pagination');
 		
 		$key = MD5('000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f');
-			$this->load->library('googlelib/GoogleAuthenticator');
+		$this->load->library('googlelib/GoogleAuthenticator');
 	}
 	
 	/*********************************************************  

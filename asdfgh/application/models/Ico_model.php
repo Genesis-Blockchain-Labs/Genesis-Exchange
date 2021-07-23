@@ -37,7 +37,12 @@ class Ico_model extends CI_Model{
 		 $insert_id = $this->db->insert_id();
 		 return $insert_id;
 	 }
-	 
+	  
+	 public function insert_safeada_log($data){
+		 $this->db->insert(DB_PREFIX.'safeada_logs',$data);
+		 $insert_id = $this->db->insert_id();
+		 return $insert_id;
+	 }
 	 /*********************************************************
 	        function used for update ico
 	 **********************************************************/

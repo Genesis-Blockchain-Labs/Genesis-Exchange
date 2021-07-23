@@ -18,20 +18,24 @@ class Admin_log extends CI_Controller {
 		$this->load->template('admin_log');
 	}
 	
+	public function safeada_log(){
+		$this->load->template('safeada_log');
+	}
+	
 	/***********************************************************
 				function used to fetch admin logs
 	***********************************************************/
 	function posts()
 	{
 		$columns = array( 
-                            0 =>'id', 
-                            1 =>'username',
-							2=>'login_date',
-                            3=> 'ip_address',
-							4=>'country',
-							5=>'country_code',
-							6=>'status',
-                        );
+			0 =>'id', 
+			1 =>'username',
+			2=>'login_date',
+			3=> 'ip_address',
+			4=>'country',
+			5=>'country_code',
+			6=>'status',
+		);
 
 		$limit = $this->input->post('length');
 		$start = $this->input->post('start');
@@ -82,6 +86,58 @@ class Admin_log extends CI_Controller {
                     "data"            => $data   
                     );
             
+        echo json_encode($json_data);
+	}
+	
+	function safeada_log_posts()
+	{
+		$columns = array( 
+			0 =>'id', 
+			1 =>'currency_name',
+			2 =>'old_price',
+			3=>'new_price',
+			4=> 'created_at',
+		);
+
+		$limit = $this->input->post('length');
+		$start = $this->input->post('start');
+		$order = $columns[$this->input->post('order')[0]['column']];
+		$dir = $this->input->post('order')[0]['dir'];
+		$totalData = $this->adminlog_model->safeada_allposts_count(); 
+		$totalFiltered = $totalData; 
+
+        if(empty($this->input->post('search')['value']))
+        {            
+            $posts = $this->adminlog_model->safeada_allposts($limit,$start,$order,$dir);
+        }
+        else 
+		{
+			$search = $this->input->post('search')['value']; 
+			$posts =  $this->adminlog_model->safeada_posts_search($limit,$start,$search,$order,$dir);
+			$totalFiltered = $this->adminlog_model->safeada_posts_search_count($search);
+		}
+
+        $data = array();
+        if(!empty($posts))
+        {
+			foreach ($posts as $post)
+            {
+                $nestedData['id'] = $start + 1;
+				$nestedData['currency_name'] = "SafeAda";
+                $nestedData['old_price'] = $post->old_price;
+                $nestedData['new_price'] = $post->new_price;
+				$nestedData['created_at'] = $post->created_at;
+                $data[] = $nestedData;
+				$start++;
+            }
+        }
+		
+        $json_data = array(
+			"draw"            => intval($this->input->post('draw')),  
+			"recordsTotal"    => intval($totalData),  
+			"recordsFiltered" => intval($totalFiltered), 
+			"data"            => $data   
+		);
         echo json_encode($json_data);
 	}
 }

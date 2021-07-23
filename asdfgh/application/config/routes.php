@@ -102,6 +102,7 @@ $route['supportdetail/(:num)'] = 'Support/support_detail/$1';
 $route['reply'] = 'Support/support_reply';
 $route['logs_detail'] = 'Logs/log_detail';
 $route['admin_logs_detail'] = 'admin_log/adminlog';
+$route['safeada_log'] = 'admin_log/safeada_log';
 $route['event'] = 'Eventmanage/event_request';
 $route['broadcast'] = 'Broadcast/index';
 $route['save_message'] = 'Broadcast/save_message';

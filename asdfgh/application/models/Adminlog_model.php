@@ -9,14 +9,21 @@ class Adminlog_model extends CI_Model{
 			function to get admin log count
 	****************************************************/
 	 function allposts_count()
-    {  
+     {  
 		$this->db->select(DB_PREFIX.'admin_log.*,login.username');
 		$this->db->from(DB_PREFIX.'admin_log');
 		$this->db->join('login',DB_PREFIX.'admin_log.admin_id=login.id','full');
 		$query = $this->db->get();
 		return $query->num_rows();
-	}
-	
+	 }
+	 
+	 function safeada_allposts_count()
+     {
+		$this->db->select('*');
+		$this->db->from(DB_PREFIX.'safeada_logs');
+		$query = $this->db->get();
+		return $query->num_rows();
+	 }
 	/****************************************************
 			function to get admin log 
 	****************************************************/
@@ -25,6 +32,23 @@ class Adminlog_model extends CI_Model{
        $this->db->select(DB_PREFIX.'admin_log.*,login.username');
 		$this->db->from(DB_PREFIX.'admin_log');
 		$this->db->join('login',DB_PREFIX.'admin_log.admin_id=login.id','full');
+		$this->db->limit($limit,$start);
+		$this->db->order_by($col,$dir);
+		$query = $this->db->get();
+		if($query->num_rows()>0)
+        {
+            return $query->result(); 
+		}
+        else
+        {
+            return null;
+        }
+    }
+	
+	function safeada_allposts($limit,$start,$col,$dir)
+    {
+       $this->db->select('*');
+		$this->db->from(DB_PREFIX.'safeada_logs');
 		$this->db->limit($limit,$start);
 		$this->db->order_by($col,$dir);
 		$query = $this->db->get();
@@ -65,6 +89,26 @@ class Adminlog_model extends CI_Model{
         }
     }
 	
+	function safeada_posts_search($limit,$start,$search,$col,$dir)
+    {
+		$this->db->select('*');
+		$this->db->from(DB_PREFIX.'safeada_logs');
+		$this->db->like('old_price',$search);
+		$this->db->or_like('new_price',$search);
+		$this->db->or_like('created_at',$search);
+		$this->db->limit($limit,$start);
+		$this->db->order_by($col,$dir);
+		$query = $this->db->get();
+		if($query->num_rows()>0)
+        {
+            return $query->result(); 
+		}
+        else
+        {
+            return null;
+        }
+    }
+	
 	/****************************************************
 			function to search admin log count
 	****************************************************/
@@ -82,4 +126,15 @@ class Adminlog_model extends CI_Model{
 		$query = $this->db->get();
 		return $query->num_rows();
     } 
+	
+	function safeada_posts_search_count($search)
+    {
+		$this->db->select('*');
+		$this->db->from(DB_PREFIX.'safeada_logs');
+		$this->db->like('old_price',$search);
+		$this->db->or_like('new_price',$search);
+		$this->db->or_like('created_at',$search);
+		$query = $this->db->get();
+		return $query->num_rows();
+    }
 }

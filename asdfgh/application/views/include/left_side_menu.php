@@ -22,7 +22,8 @@
 				<li><a><i class="fa fa-id-card-o" aria-hidden="true"></i> Logs <span class="fa fa-chevron-down"></span></a> 
 					 <ul class="nav child_menu" style="display:none;"> 
 						<li><a href="<?php echo base_url(); ?>admin_logs_detail">Admin Log</a></li>
-						<li><a href="<?php echo base_url(); ?>logs_detail">Users Log</a></li>					
+						<li><a href="<?php echo base_url(); ?>logs_detail">Users Log</a></li>		
+						<li><a href="<?php echo base_url(); ?>safeada_log">SafeAda Log</a></li> 	
 					   </ul> 
 				   </li> 
 				<!--   

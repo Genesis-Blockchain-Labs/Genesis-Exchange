@@ -66,6 +66,13 @@ class Icosetup extends CI_Controller {
 			$response = $this->ico_model->update_ico($id,$data);
 			}else{
 				$response = $this->ico_model->insert_ico($data);
+			} 
+			$log_data=array(
+				'old_price'=>(isset($check_ico['dollar_to_safeada']))?$check_ico['dollar_to_safeada']:"",
+				'new_price'=>$data['dollar_to_safeada'],
+			);
+			if($log_data['old_price']!=$log_data['new_price']){
+				$this->ico_model->insert_safeada_log($log_data);
 			}
 			$this->session->set_flashdata('success_msg', 'Details saved.');
 			$datas['pro_ico'] = $this->ico_model->check_ico('pre_ico');
