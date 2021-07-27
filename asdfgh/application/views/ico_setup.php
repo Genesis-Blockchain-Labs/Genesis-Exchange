@@ -217,10 +217,9 @@
 									if(!empty($pro_ico['dollar_to_safeada'])){
 									$data = array(
 									'name'          => 'dollar_to_safeada',
-									'type'         => 'number',
+									'type'         => 'text',
 									'value'         => $pro_ico['dollar_to_safeada'],
 									'class'         => 'form-control',
-									'min'			=>'1',
 									'autocomplete' => 'off',
 									);
 									}
@@ -377,22 +376,29 @@
   
   <script>
  $(document).ready(function() {
-	 
-	 <?php if(!empty($ico)) { ?>
+	$('[name="dollar_to_safeada"]').keypress(function(eve) {
+	  if ((eve.which != 46 || $(this).val().indexOf('.') != -1) && (eve.which < 48 || eve.which > 57) || (eve.which == 46 && $(this).caret().start == 0)) {
+		eve.preventDefault();
+	  }
+
+	  // this part is when left part of number is deleted and leaves a . in the leftmost position. For example, 33.25, then 33 is deleted
+	  $('[name="dollar_to_safeada"]').keyup(function(eve) {
+		if ($(this).val().indexOf('.') == 0) {
+		  $(this).val($(this).val().substring(1));
+		}
+	  });
+	});	
+	<?php if(!empty($ico)) { ?>
 		var i = '<?php echo count($ico); ?>';
-	 <?php } else { ?>
+	<?php } else { ?>
 		var i = 1;
-	 <?php } ?>
+	<?php } ?>
 	
     $('.add_more_button').click(function(e){ //click event on add more fields button having class add_more_button
         e.preventDefault();
         i++;
-            
-			$('#add_more_fields').append('<div class="add_stg add_field_'+i+'"><div class="remove-btn"><a href="#" class="remove_field" style="margin-left:10px;">Remove</a></div><h3>ICO Stage '+i+'</h3><div class="icoset_detail"><p><label>Details: </label><textarea name="detailss[]" class="form-control" rows="5" cols="10" id="detailss_'+i+'"><?php echo set_value('details'); ?></textarea><span id="details_er_'+i+'" class="error-form-dv"></span></p></div><div class="icoset_input"><p><label>Stage Title: </label><input type="text" name="stages[]" value="<?php echo set_value('stages'); ?>" class="form-control" id="stages_'+i+'" autocomplete="off"><span id="stages_er_'+i+'" class="error-form-dv"></span></p><p><label>Start Date: </label><input type="text" name="start_dates[]" value="<?php echo set_value('start_date'); ?>" id="start_date_'+i+'" class="form-control" autocomplete="off"><span id="start_date_er_'+i+'" class="error-form-dv"></span></p><p><label>End Date: </label><input type="text" name="end_dates[]" value="<?php echo set_value('end_date'); ?>" id="end_date_'+i+'" class="form-control" onchange="addEndDate(this)" autocomplete="off"><span id="end_date_er_'+i+'" class="error-form-dv"></span></p><p><label>Token Supply: </label><input type="number" name="token_supplys[]" value="<?php echo set_value('token_supply'); ?>" min="1" class="form-control" id="token_supplys_'+i+'" autocomplete="off"><span id="token_supplys_er_'+i+'" class="error-form-dv"></span></p><p><label>Token Price: </label><input type="number" name="token_prices[]" value="<?php echo set_value('token_price'); ?>" min="1" class="form-control" id="token_prices_'+i+'" autocomplete="off"><span id="token_prices_er_'+i+'" class="error-form-dv"></span></p><p><label>Extra Bonus: </label><input type="number" name="extra_bonuss[]" value="<?php echo set_value('extra_bonus'); ?>" min="1" class="form-control" id="extra_bonuss_'+i+'" autocomplete="off"><span id="extra_bonuss_er_'+i+'" class="error-form-dv"></span></p></div><input type="hidden" name="ico_stage[]" value="'+i+'" /></div>'); //add input field
-			
-			
-			 
-			<?php if(!empty($ico)) { ?>
+		$('#add_more_fields').append('<div class="add_stg add_field_'+i+'"><div class="remove-btn"><a href="#" class="remove_field" style="margin-left:10px;">Remove</a></div><h3>ICO Stage '+i+'</h3><div class="icoset_detail"><p><label>Details: </label><textarea name="detailss[]" class="form-control" rows="5" cols="10" id="detailss_'+i+'"><?php echo set_value('details'); ?></textarea><span id="details_er_'+i+'" class="error-form-dv"></span></p></div><div class="icoset_input"><p><label>Stage Title: </label><input type="text" name="stages[]" value="<?php echo set_value('stages'); ?>" class="form-control" id="stages_'+i+'" autocomplete="off"><span id="stages_er_'+i+'" class="error-form-dv"></span></p><p><label>Start Date: </label><input type="text" name="start_dates[]" value="<?php echo set_value('start_date'); ?>" id="start_date_'+i+'" class="form-control" autocomplete="off"><span id="start_date_er_'+i+'" class="error-form-dv"></span></p><p><label>End Date: </label><input type="text" name="end_dates[]" value="<?php echo set_value('end_date'); ?>" id="end_date_'+i+'" class="form-control" onchange="addEndDate(this)" autocomplete="off"><span id="end_date_er_'+i+'" class="error-form-dv"></span></p><p><label>Token Supply: </label><input type="number" name="token_supplys[]" value="<?php echo set_value('token_supply'); ?>" min="1" class="form-control" id="token_supplys_'+i+'" autocomplete="off"><span id="token_supplys_er_'+i+'" class="error-form-dv"></span></p><p><label>Token Price: </label><input type="number" name="token_prices[]" value="<?php echo set_value('token_price'); ?>" min="1" class="form-control" id="token_prices_'+i+'" autocomplete="off"><span id="token_prices_er_'+i+'" class="error-form-dv"></span></p><p><label>Extra Bonus: </label><input type="number" name="extra_bonuss[]" value="<?php echo set_value('extra_bonus'); ?>" min="1" class="form-control" id="extra_bonuss_'+i+'" autocomplete="off"><span id="extra_bonuss_er_'+i+'" class="error-form-dv"></span></p></div><input type="hidden" name="ico_stage[]" value="'+i+'" /></div>'); //add input field
+		<?php if(!empty($ico)) { ?>
 			$( "#start_date_"+i+"").datepicker({ minDate: new Date("<?php echo $choose_end_date; ?>"), dateFormat: 'yy-mm-dd'});
 			$( "#end_date_"+i+"").datepicker({ minDate: new Date("<?php echo $choose_end_date; ?>"), dateFormat: 'yy-mm-dd'});
 			$( "#start_date_"+i+"").datepicker({ dateFormat: 'yy-mm-dd' });
@@ -402,9 +408,8 @@
     $('#add_more_fields').on("click",".remove_field", function(e){
 	//user click on remove text links
         e.preventDefault(); $('.add_field_'+i+'').remove();
-		if(i > 1)
-		{
-		i--;
+		if(i > 1){
+			i--;
 		}
     })
 });
